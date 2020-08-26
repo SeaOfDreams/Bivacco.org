@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="nav-wrapper blue">
+    <div class="nav-wrapper">
       
         <router-link to="/" class="brand-logo">Pro-Conditions</router-link>
 
@@ -9,7 +9,7 @@
             <router-link to="/">Home</router-link>
           </li>
           <li>
-            <router-link to="/Dashboard">Dashboard</router-link>
+            <router-link to="/Dashboard">Incidenti</router-link>
           </li>
           <li>
             <router-link to="/Register">Registrati</router-link>
@@ -23,9 +23,19 @@
   </nav>
 </template>
 
-<style scoped>
+<style>
+.brand-logo {
+  margin-left: 2rem;
+} 
 
+.nav-wrapper {
+  background-color: #521751;
+  height: 56px;
+  padding: 0 20px;
+  
+}
 
+ 
 /* #header {
   height: 56px;
   display: flex;
@@ -64,10 +74,6 @@ li {
   margin: 0 1rem;
 }
 
-/* li a {
-  text-decoration: none;
-  color: white;
-} */
 
 li a:hover,
 li a:active,
