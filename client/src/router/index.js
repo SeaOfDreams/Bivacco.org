@@ -4,13 +4,15 @@ import Home from '../views/Home.vue'
 import Register from '../views/Register.vue'
 import Dashboard from '../views/Dashboard.vue'
 import Login from '../views/Login.vue'
+import AddIncidente from '../views/AddIncidente.vue'
+import VediIncidente from '../views/VediIncidente.vue'
 
 
 Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'Home',
     component: Home
   },
@@ -28,7 +30,18 @@ Vue.use(VueRouter)
     path: '/signin',
     name: 'Login',
     component: Login
-  }
+  },
+  {
+    path: '/add',
+    name: 'aggiungi-incidente',
+    component: AddIncidente
+  },
+  {
+    path: '/:incidente_id',
+    name: 'vedi-incidente',
+    component: VediIncidente
+  },
+  
   
 ]
 
