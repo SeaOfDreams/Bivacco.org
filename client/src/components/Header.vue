@@ -6,16 +6,16 @@
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <router-link to="/">Home</router-link>
+            <router-link class="nav_link" to="/" exact>Home</router-link>
           </li>
           <li>
-            <router-link to="/Dashboard">Incidenti</router-link>
+            <router-link class="nav_link" to="/Dashboard">Incidenti</router-link>
           </li>
           <li>
-            <router-link to="/Register">Registrati</router-link>
+            <router-link class="nav_link" to="/Register">Registrati</router-link>
           </li>
           <li>
-            <router-link to="/signin">Login</router-link>
+            <router-link class="nav_link" to="/signin">Login</router-link>
           </li>
         </ul>
      
@@ -72,6 +72,11 @@ ul {
 
 li {
   margin: 0 1rem;
+  
+}
+
+.nav_link {
+  font-size: 18px;
 }
 
 

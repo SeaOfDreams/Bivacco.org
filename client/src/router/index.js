@@ -37,7 +37,7 @@ Vue.use(VueRouter)
     component: AddIncidente
   },
   {
-    path: '/:incidente_id',
+    path: '/:incidente_idd',
     name: 'vedi-incidente',
     component: VediIncidente
   },
