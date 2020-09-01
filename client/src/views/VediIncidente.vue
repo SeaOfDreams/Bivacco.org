@@ -5,6 +5,14 @@
         {{Titolo}}</h4></li>
         <li class="collection-item">Autore: {{Autore}}</li>
         <li class="collection-item">Data: {{Data}}</li>
+        <li class="collection-item">Attività praticata: {{attivita_praticata}}</li>
+        <li class="collection-item">Grado pericolo valanghe:  {{grado_pericolo_valanghe}}</li>
+        <li class="collection-item">Altezza massima raggiunta: {{alt_max_ragg}}</li>
+        <li class="collection-item">Nr. partecipanti: {{nr_partecipanti}}</li>
+        <li class="collection-item">Tipo di evento: {{tipo_di_evento}}</li>
+        <li class="collection-item">Tipo di evento: {{tipo_di_evento}}</li>
+        <li class="collection-item">Tipo di evento: {{tipo_di_evento}}</li>
+        <li class="collection-item">Tipo di evento: {{tipo_di_evento}}</li>
         <li class="collection-item">Tipo di evento: {{tipo_di_evento}}</li>
     </ul>
     <router-link to="/dashboard"><button class="btn back">Indietro</button></router-link>
@@ -36,7 +44,18 @@ export default {
           vm.tipo_di_evento =  doc.data().tipo_di_evento,
           vm.Autore = doc.data().Autore,
           vm.Titolo = doc.data().Titolo,
-          vm.Data = doc.data().Data
+          vm.Data = doc.data().Data,
+          vm.grado_pericolo_valanghe = doc.data().grado_pericolo_valanghe,
+          vm.alt_max_ragg = doc.data().alt_max_ragg,
+          vm.nr_partecipanti = doc.data().nr_partecipanti,
+          vm.nr_persone_coinvolte = doc.data().nr_persone_coinvolte,
+          vm.descrizione = doc.data().descrizione,
+          vm.condizioni_meteo = doc.data().condizioni_meteo,
+          vm.misure_prevenzione = doc.data().misure_prevenzione,
+          vm.prep_fisica = doc.data().prep_fisica,
+          vm.commento = doc.data().commento,
+          vm.intervento_soccorso = doc.data().intervento_soccorso,
+          vm.luogo = doc.data().luogo
          })
        })
      })
@@ -54,6 +73,17 @@ export default {
           this.Titolo = doc.data().Titolo
           this.tipo_di_evento = doc.data().tipo_di_evento
           this.Data = doc.data().Data
+          this.grado_pericolo_valanghe = doc.data().grado_pericolo_valanghe
+          this.alt_max_ragg = doc.data().alt_max_ragg
+          this.nr_partecipanti = doc.data().nr_partecipanti
+          this.nr_persone_coinvolte = doc.data().nr_persone_coinvolte
+          this.descrizione = doc.data().descrizione
+          this.condizioni_meteo = doc.data().condizioni_meteo
+          this.misure_prevenzione = doc.data().misure_prevenzione
+          this.prep_fisica = doc.data().prep_fisica
+          this.commento = doc.data().commento
+          this.intervento_soccorso = doc.data().intervento_soccorso
+          this.luogo = doc.data().luogo
         })
       })
     }

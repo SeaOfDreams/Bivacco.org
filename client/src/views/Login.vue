@@ -52,6 +52,10 @@
 h1 {
   text-align: center;
 }
+
+label {
+    font-size: 15px;
+  }
   .signin-form {
     width: 400px;
     margin: 30px auto;
@@ -89,17 +93,23 @@ h1 {
   margin-top: 2rem;
 }
 
-  .submit button {
-    border: 1px solid #521751;
-    color: #521751;
-    padding: 10px 20px;
-    font: inherit;
-    cursor: pointer;
-  }
+ .submit button {
+ 
+  padding: 15px 20px;
+  background-color: #fa923f;
+  color: white;
+  border: none;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
 
   .submit button:hover,
   .submit button:active {
-    background-color: #521751;
+    background-color: #c97532;
     color: white;
   }
 

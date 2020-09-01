@@ -1,12 +1,14 @@
 <template>
   <div id="dashboard">
-    <div class="col s12 m7">
+    <div class="col s10 m7">
       <h3 class="header">Incidenti</h3>
       <div class="card horizontal" v-for="incidente in incidenti" v-bind:key="incidente.id">
         <div class="card-stacked">
           <div class="card-content">
             <div class="top_card">
-              <h5>{{incidente.Titolo}}</h5><p>{{incidente.Data}} - Autore: {{incidente.Autore}}</p>
+              <p class="inizio_card">{{incidente.Data}} - Autore: {{incidente.Autore}}</p><h5>{{incidente.Titolo}}</h5>
+              <p>Luogo: {{incidente.luogo}}</p>
+              
             </div>          
           </div>
           <div class="card-action">
@@ -45,14 +47,27 @@ export default {
         querySnapshot.forEach((doc) => {
           const data = {
             'id': doc.id,
+            'luogo': doc.luogo,
             'incidente_id': doc.data().incidente_id,
             'attivita_praticata': doc.data().attivita_praticata,
             'tipo_di_evento': doc.data().tipo_di_evento,
             'Autore': doc.data().Autore,
             'Titolo': doc.data().Titolo,
-            'Data': doc.data().Data
-          }
-          this.incidenti.push(data);
+            'Data': doc.data().Data,
+            'grado_pericolo_valanghe': doc.data().grado_pericolo_valanghe,
+            'alt_max_ragg': doc.data().alt_max_ragg,
+            'nr_partecipanti': doc.data().nr_partecipanti,
+            'nr_persone_coinvolte': doc.data().nr_persone_coinvolte,
+            'descrizione': doc.data().descrizione,
+            'condizioni_meteo': doc.data().condizioni_meteo,
+            'misure_prevenzione': doc.data().misure_prevenzione,
+            'prep_fisica': doc.data().prep_fisica,
+            'commento': doc.data().commento,
+            'intervento_soccorso': doc.data().intervento_soccorso,
+            'luogo': doc.data().luogo
+            }
+            
+            this.incidenti.push(data);
         })
       })
   }
@@ -65,8 +80,8 @@ h3 {
   text-align: center;
 }
 
-p {
-  font-size: 16px;
+p.inizio-card {
+  font-size: 15px;
 }
 
 .card.horizontal {

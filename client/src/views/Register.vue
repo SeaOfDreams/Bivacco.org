@@ -111,6 +111,7 @@ h1 {
   border: 1px solid #eee;
   padding: 20px;
   box-shadow: 0 2px 3px #ccc;
+  
 }
 
 .input {
@@ -121,10 +122,16 @@ h1 {
   display: block;
   color: #4e4e4e;
   margin-bottom: 6px;
-}
+  }
+
+label {
+    font-size: 15px;
+  }
+
 
 .input.inline label {
   display: inline;
+  
 }
 
 .input input {
@@ -156,17 +163,22 @@ h1 {
 }
 
 .submit button {
-  border: 1px solid #521751;
-  color: #521751;
-  padding: 10px 20px;
-  font: inherit;
+ 
+  padding: 15px 20px;
+  background-color: #fa923f;
+  color: white;
+  border: none;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
   cursor: pointer;
   
 }
 
 .submit button:hover,
 .submit button:active {
-  background-color: #521751;
+  background-color: #c97532;
   color: white;
 }
 
