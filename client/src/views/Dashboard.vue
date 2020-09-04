@@ -1,6 +1,6 @@
 <template>
   <div id="dashboard">
-    <div class="col s10 m7">
+    <div class="col s12 m6">
       <h3 class="header">Incidenti</h3>
       <div class="card horizontal" v-for="incidente in incidenti" v-bind:key="incidente.id">
         <div class="card-stacked">
@@ -20,8 +20,8 @@
     </div>
 
     <div class="fixed-action-btn">
-      <router-link to="/add" class="btn-floating btn-large red">
-        <i class="fa fa-plus"></i>
+      <router-link to="/add" class="float">
+        <i class="fa fa-plus my-float"></i>
       </router-link>
     </div>
   </div>
@@ -47,7 +47,6 @@ export default {
         querySnapshot.forEach((doc) => {
           const data = {
             'id': doc.id,
-            'luogo': doc.luogo,
             'incidente_id': doc.data().incidente_id,
             'attivita_praticata': doc.data().attivita_praticata,
             'tipo_di_evento': doc.data().tipo_di_evento,
@@ -76,8 +75,11 @@ export default {
 
 <style scoped>
 h1,
-h3 {
+h3.header {
   text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 p.inizio-card {
@@ -95,7 +97,8 @@ p.inizio-card {
 button.vedi_gita {
   min-width: 120px;
   padding: 10px 30px;
-  background-color: #fa923f;
+  background-color: #714DD2;
+  
   color: white;
   border: none;
   font-family: 'Source Sans Pro', sans-serif;
@@ -105,7 +108,20 @@ button.vedi_gita {
   cursor: pointer;
 }
 
-.fa.fa-plus {
-  background-color:#fa923f;
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#714DD2;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
 }
 </style>
