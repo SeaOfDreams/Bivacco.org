@@ -9,8 +9,8 @@
       </b-navbar-item>
     </template>
     <template slot="start">
-      <b-navbar-item tag="router-link" :to="{ path: '/' }">Home</b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ path: '/dashboard' }">Incidenti</b-navbar-item>
+      <b-navbar-item class="nav-item" tag="router-link" :to="{ path: '/' }">Home</b-navbar-item>
+      <b-navbar-item class="nav-item" tag="router-link" :to="{ path: '/dashboard' }">Incidenti</b-navbar-item>
       
     </template>
 
@@ -38,75 +38,23 @@
 .start {
   margin-left: 10px;
 }
-/* .brand-logo {
-  margin-left: 2rem;
-} 
 
-nav.navbar {
-  background-color: #521751;
-  height: 56px;
-  padding: 0 20px;
-  font-family: 'Maven Pro', sans-serif;
-  
-}
-
-a.nav_link {
-  color: white;
-  font-size: 17px;
-} */
-
-/* .nav_link:hover,
-.nav_link:active,
-.nav-link.link-router-active {
-  background-color: #521751;
-  color: #fa923f;
-} */
-
-/* a.button.is-primary {
-  background-color: #fa923f;
-  font-weight: 500;
-   
-}
-
-.register_button {
-  color: white;
-  font-size: 16px;
-}
-
-.register_button:hover{
-  color: white;  
+a.button.is-primary {
+  background-color: #F26522;
 }
 
 a.button.is-primary:hover {
-  background-color: #c97532;
+  background-color: #Fda942;
 }
 
-a.signin_button {
-  color: #4a4a4a;
-  font-weight: 500;
+.navbar-item.nav-item.router-link-exact-active {
+  color: #F26522;
 }
 
-a.button.is-light {
-  background-color: white;    
-}
-
-
-.nav_link {
-  font-size: 18px;
+.navbar-item.nav-item:hover {
+  color: #F26522;
 }
 
 
-a:hover,
-a:active,
-a.router-link-active {
-  color: #fa923f;
-}
 
-a.navbar-burger.burger {
-  background-color: #fa923f;  
-}
-
-span.burger_span {
- color: white;
-} */
 </style> 

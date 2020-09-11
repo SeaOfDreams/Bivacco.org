@@ -1,13 +1,14 @@
 <template>
   <div id="dashboard">
-    <div class="col s12 m6">
+    <div class="container_incidenti">
       <h3 class="header">Incidenti</h3>
-      <div class="card horizontal" v-for="incidente in incidenti" v-bind:key="incidente.id">
-        <div class="card-stacked">
+      <div class="card-horizontal" v-for="incidente in incidenti" v-bind:key="incidente.id">
+        
           <div class="card-content">
             <div class="top_card">
-              <p class="inizio_card">{{incidente.Data}} - Autore: {{incidente.Autore}}</p><h5>{{incidente.Titolo}}</h5>
-              <p>Luogo: {{incidente.luogo}}</p>
+              <p class="inizio_card">{{incidente.Data}} - Autore: {{incidente.Autore}}</p><span class="titolo">{{incidente.Titolo}}</span>
+              <p class="luogo">Luogo: {{incidente.luogo}}</p>
+              <span class="attività">{{incidente.attivita_praticata}}</span>
               
             </div>          
           </div>
@@ -15,7 +16,7 @@
             <router-link v-bind:to="{name:'vedi-incidente', params: {incidente_id: incidente.incidente_id}}"><button class="vedi_gita">Vedi</button>
             </router-link>
           </div> 
-        </div>
+        
       </div>
     </div>
 
@@ -33,9 +34,7 @@ export default {
   name: "Dashboard",
   data() {
     return {
-      incidenti: [],
-      
-          
+      incidenti: [], 
       
       
     }
@@ -74,20 +73,50 @@ export default {
 </script>
 
 <style scoped>
+
+
+.container_incidenti {
+  font-family: 'Maven Pro', sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-horizontal {
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.inizio_card {  
+  font-size: 15px;
+}
+
+
 h1,
 h3.header {
   text-align: center;
   font-size: 32px;
   margin-bottom: 30px;
-  font-family: 'Maven Pro', sans-serif;
+  
 }
 
-p.inizio-card {
-  font-size: 15px;
+p.luogo {
+  margin-bottom: 14px;
 }
 
-.card.horizontal {
-  border-radius: 5px;
+span.titolo {
+  font-weight: 700;
+  font-size: 22px;
+  
+}
+
+span.attività {
+  padding: 8px;
+  background: #e6e6dd;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .card-action {
@@ -97,8 +126,7 @@ p.inizio-card {
 button.vedi_gita {
   min-width: 120px;
   padding: 10px 30px;
-  background-color: #714DD2;
-  
+  background-color: #F26522;  
   color: white;
   border: none;
   font-family: 'Source Sans Pro', sans-serif;
@@ -106,15 +134,20 @@ button.vedi_gita {
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
-.float{
+button.vedi_gita:hover {
+  background-color: #FDA942;
+}
+
+.float {
 	position:fixed;
 	width:60px;
 	height:60px;
 	bottom:40px;
 	right:40px;
-	background-color:#714DD2;
+	background-color:#F26522;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
