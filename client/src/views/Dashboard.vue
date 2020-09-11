@@ -85,7 +85,7 @@ export default {
 
 .card-horizontal {
   margin-bottom: 20px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
@@ -129,7 +129,7 @@ button.vedi_gita {
   background-color: #F26522;  
   color: white;
   border: none;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   font-size: 17px;
   font-weight: 600;
   border-radius: 5px;
@@ -139,6 +139,10 @@ button.vedi_gita {
 
 button.vedi_gita:hover {
   background-color: #FDA942;
+}
+
+button.vedi_gita:active {
+  border: none;
 }
 
 .float {

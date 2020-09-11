@@ -1,113 +1,290 @@
 <template>
-  <div id="vedi-incidente">
-    <div class="container">
-      <ul class="collection with-header">
-          <li class="collection-header"><h4>{{Titolo}}</h4>Data: {{Data}} - Autore: {{Autore}}</li>
-          <li class="collection-item">Data: {{Data}} - Autore: {{Autore}}</li>
-          <li class="collection-item">Data: {{Data}}</li>
-          <li class="collection-item">Attività praticata: {{attivita_praticata}}</li>
-          <li class="collection-item">Grado pericolo valanghe:  {{grado_pericolo_valanghe}}</li>
-          <li class="collection-item">Altezza massima raggiunta: {{alt_max_ragg}}</li>
-          <li class="collection-item">Nr. partecipanti: {{nr_partecipanti}}</li>
-          <li class="collection-item">Tipo di evento: {{tipo_di_evento}}</li>
-          <li class="collection-item">Tipo di evento: {{tipo_di_evento}}</li>
-          <li class="collection-item">Tipo di evento: {{tipo_di_evento}}</li>
-          <li class="collection-item">Tipo di evento: {{tipo_di_evento}}</li>
-          <li class="collection-item">Tipo di evento: {{tipo_di_evento}}</li>
-      </ul>
-      <router-link to="/dashboard"><button class="btn back">Indietro</button></router-link>
+  <div class="container_incidente">
+    <div class="box-titolo">
+      <span class="titolo">{{Titolo}}</span> -
+      <span class="data">{{Data}}</span>
+      <div class="luogo">{{luogo}}</div>
+      <span class="attività">{{attivita_praticata}}</span>
+    </div>
+    <!-- End of box-titolo -->
+
+    <div class="inner-container">
+      <div class="left-column">
+        <span>
+          <strong>Autore:</strong>
+          {{Autore}}
+        </span>
+        <span>
+          <strong>Tipo di evento:</strong>
+          {{tipo_di_evento}}
+        </span>
+        <span>
+          <strong>Altitudine massima raggiunta:</strong>
+          {{alt_max_ragg}} m.
+        </span>
+        <span>
+          <strong>Numero partecipanti:</strong>
+          {{nr_partecipanti}}
+        </span>
+        <span>
+          <strong>Numero persone coinvolte:</strong>
+          {{nr_persone_coinvolte}}
+        </span>
+        <span>
+          <strong>Intervento soccorso organizzato:</strong>
+          {{intervento_soccorso}}
+        </span>
+      </div><!-- End of left column -->
+
+      <div class="right-column">
+        <div class="descrizione">
+          <h1><strong>Descrizione</strong></h1>          
+        </div>
+
+        <div class="container-descrizione">
+          <span>{{descrizione}}</span>
+        </div>
+
+         <div class="descrizione">
+          <h1><strong>Condizioni meteo incontrate durante la gita</strong> 🌤️</h1>          
+        </div>
+
+        <div class="container-descrizione">
+          <span>{{condizioni_meteo}}</span>
+        </div>
+
+        <div class="descrizione">
+          <h1><strong>Preparazione fisica e tecnica dei partecipanti</strong></h1>          
+        </div>
+
+        <div class="container-descrizione">
+          <span>{{prep_fisica}}</span>
+        </div>
+
+        <div class="descrizione">
+          <h1><strong>Misure di prevenzione adottate</strong></h1>          
+        </div>
+
+        <div class="container-descrizione">
+          <span>{{misure_prevenzione}}</span>
+        </div>
+
+        <div class="descrizione">
+          <h1><strong>Commento</strong></h1>          
+        </div>
+
+        <div class="container-descrizione">
+          <span>{{commento}}</span>
+        </div>
+
+      </div><!-- End of right column -->
+    </div>
+
+    <div class="back">
+      <router-link to="/dashboard">
+        <button class="button is-primary">Indietro</button>
+      </router-link>
+    </div>
+    <div class="fixed-action-btn">
+      <router-link to="/add" class="float">
+        <i class="fa fa-plus my-float"></i>
+      </router-link>
     </div>
   </div>
+
+  
 </template>
 
 <script>
-import db from "../components/firebaseInit"
+import db from "../components/firebaseInit";
 export default {
   name: "vedi-incidente",
   data() {
     return {
-      'attivita_praticata': null,
-      'incidente_id': null,
-      'tipo_di_evento':  null,
-      'Autore': null, 
-      'Titolo':  null,
-      'Data': null
-    }
+      attivita_praticata: null,
+      incidente_id: null,
+      tipo_di_evento: null,
+      Autore: null,
+      Titolo: null,
+      Data: null,
+      grado_pericolo_valanghe: null,
+      alt_max_ragg: null,
+      nr_partecipanti: null,
+      nr_persone_coinvolte: null,
+      descrizione: null,
+      condizioni_meteo: null,
+      misure_prevenzione: null,
+      prep_fisica: null,
+      commento: null,
+      intervento_soccorso: null,
+      luogo: null
+    };
   },
-  beforeRouteEnter (to, from, next) {
-    db.collection('incidenti').where('incidente_id', '==', to.params.incidente_id).get()
-     .then(querySnapshot => {
-       querySnapshot.forEach(doc => {
-         next(vm => {
-          vm.incidente_id = doc.data().incidente_id
-          vm.attivita_praticata = doc.data().attivita_praticata,
-          vm.tipo_di_evento =  doc.data().tipo_di_evento,
-          vm.Autore = doc.data().Autore,
-          vm.Titolo = doc.data().Titolo,
-          vm.Data = doc.data().Data,
-          vm.grado_pericolo_valanghe = doc.data().grado_pericolo_valanghe,
-          vm.alt_max_ragg = doc.data().alt_max_ragg,
-          vm.nr_partecipanti = doc.data().nr_partecipanti,
-          vm.nr_persone_coinvolte = doc.data().nr_persone_coinvolte,
-          vm.descrizione = doc.data().descrizione,
-          vm.condizioni_meteo = doc.data().condizioni_meteo,
-          vm.misure_prevenzione = doc.data().misure_prevenzione,
-          vm.prep_fisica = doc.data().prep_fisica,
-          vm.commento = doc.data().commento,
-          vm.intervento_soccorso = doc.data().intervento_soccorso,
-          vm.luogo = doc.data().luogo
-         })
-       })
-     })
+  beforeRouteEnter(to, from, next) {
+    db.collection("incidenti")
+      .where("incidente_id", "==", to.params.incidente_id)
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          next((vm) => {
+            vm.incidente_id = doc.data().incidente_id;
+            vm.attivita_praticata = doc.data().attivita_praticata,
+            vm.tipo_di_evento = doc.data().tipo_di_evento,
+            vm.Autore = doc.data().Autore,
+            vm.Titolo = doc.data().Titolo,
+            vm.Data = doc.data().Data,
+            vm.grado_pericolo_valanghe = doc.data().grado_pericolo_valanghe,
+            vm.alt_max_ragg = doc.data().alt_max_ragg,
+            vm.nr_partecipanti = doc.data().nr_partecipanti,
+            vm.nr_persone_coinvolte = doc.data().nr_persone_coinvolte,
+            vm.descrizione = doc.data().descrizione,
+            vm.condizioni_meteo = doc.data().condizioni_meteo,
+            vm.misure_prevenzione = doc.data().misure_prevenzione,
+            vm.prep_fisica = doc.data().prep_fisica,
+            vm.commento = doc.data().commento,
+            vm.intervento_soccorso = doc.data().intervento_soccorso,
+            vm.luogo = doc.data().luogo;
+          });
+        });
+      });
   },
   watch: {
-    '$route': 'fetchData'
+    $route: "fetchData",
   },
   methods: {
-    fetchData () {
-      db.collection('incidenti').where('incidente_id', '==', this.$route.params.incidente_id).get().then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          this.incidente_id = doc.data().incidente_id
-          this.attivita_praticata = doc.data().attivita_praticata
-          this.Autore = doc.data().Autore
-          this.Titolo = doc.data().Titolo
-          this.tipo_di_evento = doc.data().tipo_di_evento
-          this.Data = doc.data().Data
-          this.grado_pericolo_valanghe = doc.data().grado_pericolo_valanghe
-          this.alt_max_ragg = doc.data().alt_max_ragg
-          this.nr_partecipanti = doc.data().nr_partecipanti
-          this.nr_persone_coinvolte = doc.data().nr_persone_coinvolte
-          this.descrizione = doc.data().descrizione
-          this.condizioni_meteo = doc.data().condizioni_meteo
-          this.misure_prevenzione = doc.data().misure_prevenzione
-          this.prep_fisica = doc.data().prep_fisica
-          this.commento = doc.data().commento
-          this.intervento_soccorso = doc.data().intervento_soccorso
-          this.luogo = doc.data().luogo
-        })
-      })
-    }
-  }
-}
+    fetchData() {
+      db.collection("incidenti")
+        .where("incidente_id", "==", this.$route.params.incidente_id)
+        .get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            this.incidente_id = doc.data().incidente_id;
+            this.attivita_praticata = doc.data().attivita_praticata;
+            this.Autore = doc.data().Autore;
+            this.Titolo = doc.data().Titolo;
+            this.tipo_di_evento = doc.data().tipo_di_evento;
+            this.Data = doc.data().Data;
+            this.grado_pericolo_valanghe = doc.data().grado_pericolo_valanghe;
+            this.alt_max_ragg = doc.data().alt_max_ragg;
+            this.nr_partecipanti = doc.data().nr_partecipanti;
+            this.nr_persone_coinvolte = doc.data().nr_persone_coinvolte;
+            this.descrizione = doc.data().descrizione;
+            this.condizioni_meteo = doc.data().condizioni_meteo;
+            this.misure_prevenzione = doc.data().misure_prevenzione;
+            this.prep_fisica = doc.data().prep_fisica;
+            this.commento = doc.data().commento;
+            this.intervento_soccorso = doc.data().intervento_soccorso;
+            this.luogo = doc.data().luogo;
+          });
+        });
+    },
+  },
+};
 </script>
 
 <style scoped>
+.container_incidente {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: "Maven Pro", sans-serif;
+}
 
-.btn.back {  
-  padding: 0px 30px;
-  background-color: #fa923f;
+.box-titolo {
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  max-width: 1100px;
+  border-radius: 8px;
+}
+
+.titolo {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.luogo {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+span.attività {
+  padding: 8px;
+  background: #e6e6dd;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.left-column {
+  width: 40%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+  justify-content: flex-start;
+}
+
+.right-column {
+  width: calc(100% - 30% - 5px);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.descrizione {
+  padding: 15px 0px 0px 15px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.container-descrizione {
+  padding: 5px 15px;
+}
+
+.back {
+  text-align: center;
+}
+
+button.is-primary { 
+  padding: 10px 30px;
+  background-color: #F26522;  
   color: white;
   border: none;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   font-size: 17px;
   font-weight: 600;
   border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+ }
+
+button.is-primary:hover {
+  background-color: #Fda942;
 }
 
-.collection.with-header {
-  display: flex;
-  flex-direction: column;
+.float {
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#F26522;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
 }
 
-
+.my-float{
+	margin-top:22px;
+}
 </style>

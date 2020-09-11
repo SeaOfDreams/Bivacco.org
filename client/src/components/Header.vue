@@ -30,9 +30,11 @@
 
 <style>
 .navbar {
-  padding: 20px 50px;
+  padding: 20px 0px;
   margin-bottom: 20px;
   font-family: 'Maven Pro', sans-serif;;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .start {
