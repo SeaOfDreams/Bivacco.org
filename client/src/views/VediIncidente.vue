@@ -37,40 +37,40 @@
       </div><!-- End of left column -->
 
       <div class="right-column">
-        <div class="descrizione">
-          <h1><strong>Descrizione</strong></h1>          
+        <div>
+          <h1 class="descrizione">Descrizione</h1>          
         </div>
 
         <div class="container-descrizione">
           <span>{{descrizione}}</span>
         </div>
 
-         <div class="descrizione">
-          <h1><strong>Condizioni meteo incontrate durante la gita</strong> 🌤️</h1>          
+         <div>
+          <h1 class="descrizione">Condizioni meteo incontrate durante la gita 🌤️</h1>          
         </div>
 
         <div class="container-descrizione">
           <span>{{condizioni_meteo}}</span>
         </div>
 
-        <div class="descrizione">
-          <h1><strong>Preparazione fisica e tecnica dei partecipanti</strong></h1>          
+        <div>
+          <h1 class="descrizione">Preparazione fisica e tecnica dei partecipanti</h1>          
         </div>
 
         <div class="container-descrizione">
           <span>{{prep_fisica}}</span>
         </div>
 
-        <div class="descrizione">
-          <h1><strong>Misure di prevenzione adottate</strong></h1>          
+        <div>
+          <h1 class="descrizione">Misure di prevenzione adottate</h1>          
         </div>
 
         <div class="container-descrizione">
           <span>{{misure_prevenzione}}</span>
         </div>
 
-        <div class="descrizione">
-          <h1><strong>Commento</strong></h1>          
+        <div>
+          <h1 class="descrizione">Commento</h1>          
         </div>
 
         <div class="container-descrizione">
@@ -238,12 +238,13 @@ span.attività {
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .descrizione {
   padding: 15px 0px 0px 15px;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .container-descrizione {
