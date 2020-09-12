@@ -1,6 +1,9 @@
 <template>
-  <div id="aggiungi-incidente">
-    <h3 class="titolo">Aggiungi Nuovo Incidente</h3>
+  <div class="container-add-incidente">
+    <div class="header">
+        <h3 class="titolo">Aggiungi Nuovo Incidente</h3>
+    </div>
+    
     <div class="row">
     <form @submit.prevent="salvaIncidente" class="col s12">
       
@@ -181,8 +184,19 @@ export default {
   
 <style scoped>
 
-  h3.titolo {
-    text-align: center;
+.container-add-incidente {
+  font-family: "Maven Pro", sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+  .titolo {
+    font-size: 32px;
+    margin-bottom: 30px;
   }
 
   label {

@@ -187,6 +187,7 @@ export default {
   max-width: 1100px;
   margin: 0 auto;
   font-family: "Maven Pro", sans-serif;
+  padding-top: 20px;
 }
 
 .box-titolo {
