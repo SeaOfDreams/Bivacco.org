@@ -141,7 +141,7 @@ button.vedi_gita:hover {
   background-color: #FDA942;
 }
 
-button.vedi_gita:active {
+button.vedi_gita:focus {
   border: none;
 }
 
