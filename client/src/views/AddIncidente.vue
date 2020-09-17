@@ -107,7 +107,9 @@
         </b-field>        
           
         <div class="row">
-          <button type="submit" class="btn add-incidente">Invia</button>
+          <b-tooltip label="Tooltip top">
+            <button type="submit" class="btn add-incidente">Invia</button>
+          </b-tooltip>
         </div>
           
 
@@ -224,6 +226,8 @@ form {
 .row {
   text-align: center;
 }
+
+
 
 
 

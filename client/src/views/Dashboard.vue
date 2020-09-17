@@ -18,13 +18,15 @@
           </div> 
         
       </div>
-    </div>
+    </div>      
 
-    <div class="fixed-action-btn">
-      <router-link to="/add" class="float">
-        <i class="fa fa-plus my-float"></i>
-      </router-link>
-    </div>
+    <div class="fixed-action-btn">              
+      <router-link to="/add" class="float">      
+        <b-tooltip label="Aggiungi incidente">
+          <i class="fa fa-plus my-float"></i>   
+        </b-tooltip>     
+      </router-link>      
+    </div>  
   </div>
 </template>
 
@@ -158,7 +160,12 @@ button.vedi_gita:focus {
 	box-shadow: 2px 2px 3px #999;
 }
 
+
 .my-float{
 	margin-top:22px;
+}
+
+b-tooltip {
+  background: #F26522;
 }
 </style>
