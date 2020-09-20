@@ -1,9 +1,7 @@
 <template>
   <div id="app">
-    <app-header />
-    <div class="container">
-      <router-view />
-    </div>
+    <app-header />    
+    <router-view />    
   </div>
 </template>
 
@@ -20,7 +18,7 @@ export default {
 
 <style>
 
-html {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -30,4 +28,6 @@ html {
 body {
   font-family: 'Maven Pro', sans-serif;
 }
+
+
 </style>

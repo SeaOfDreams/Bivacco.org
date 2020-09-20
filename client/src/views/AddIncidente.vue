@@ -39,14 +39,14 @@
         <b-field
             label="Attività praticata">
             <b-select placeholder="Seleziona un'opzione" expanded v-model="attivita_praticata">
-                <option value="flint">Alpinismo, Alta montagna</option>
-                <option value="silver">Sci alpinismo, fuoripista</option>
-                <option value="silver">Cascate di ghiaccio, misto</option>
-                <option value="silver">Arrampicata su roccia</option>
-                <option value="silver">Escursionismo</option>
-                <option value="silver">Vie ferrate</option>
-                <option value="silver">Racchette da  neve</option>
-                <option value="silver">Mountain Bike</option>
+                <option value="Alpinismo">Alpinismo, Alta montagna</option>
+                <option value="Sci alpinismo - fuoripista">Sci alpinismo, fuoripista</option>
+                <option value="Cascate di ghiaccio, misto">Cascate di ghiaccio, misto</option>
+                <option value="Arrampicata su roccia">Arrampicata su roccia</option>
+                <option value="Escursionismo">Escursionismo</option>
+                <option value="Vie Ferrate">Vie ferrate</option>
+                <option value="Racchette da neve">Racchette da  neve</option>
+                <option value="Mountain Bike">Mountain Bike</option>
             </b-select>
         </b-field>
 
@@ -72,7 +72,7 @@
          <div class="field">          
           <label class="label">Quota massima raggiunta</label>       
           <div class="control">
-            <input class="input" type="text" placeholder="Es. 3.843 m" v-model="alt_max_ragg">
+            <input class="input" type="text" placeholder="Es. 3.843" v-model="alt_max_ragg">
           </div>
         </div>
 
@@ -107,9 +107,9 @@
         </b-field>        
           
         <div class="row">
-          <b-tooltip label="Tooltip top">
+          
             <button type="submit" class="btn add-incidente">Invia</button>
-          </b-tooltip>
+          
         </div>
           
 
