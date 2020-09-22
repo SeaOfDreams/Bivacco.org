@@ -1,13 +1,12 @@
 <template>
   <div class="container_home">
-    <div class="inner-container">
+    <div class="header-container">
       <div class="title">
 
         <h1 class="title-primary">
-          <span class="title-main">Bivacco.org</span>
+          <span class="title-main">bivacco</span>          
           <span class="title-sub">Condividere per prevenire</span>
-        </h1>
-        
+        </h1>        
    
       </div>
     </div>
@@ -24,38 +23,9 @@ export default {
 
 <style scoped>
 
-.title {
-  position: absolute;
-  top: 30%;
-  left: 50%; 
-  transform: translate(-50%, -50%);
-}
-
-.title-primary {
-  color: #fff;
-  font-family: 'Maven Pro', sans-serif;  
-  text-align: center;
-}
-
-.title-main {
-  display: block;
-  font-size: 54px;
-  text-transform: uppercase;  
-  letter-spacing: 12px;
-  font-weight: 500;
-}
-
-.title-sub {
-  display: block;
-  font-size: 32px;
-  margin-top: 12px;
-  letter-spacing: 6px;
-  font-weight: 400;
-}
 
 
-
-.inner-container {
+.header-container {
   height: 100vh;
   background-image: url('../assets/header_img.png');
   background-size: cover;
@@ -63,6 +33,74 @@ export default {
   position: relative;
 }
 
+.title {
+  position: absolute;
+  top: 35%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.title-primary {
+  color: #fff;
+  font-family: 'Maven Pro', sans-serif;  
+  backface-visibility: hidden;
+}
+
+.title-main {
+  display: block;
+  font-size: 58px;
+  text-transform: uppercase;    
+  letter-spacing: 22px;
+  font-weight: 500;
+
+  animation: moveInLeft 1s ease-in-out;
+  
+}
+
+.title-sub {
+  display: block;
+  font-size: 42px;
+  margin-top: 18px;
+  letter-spacing: 6px;
+  font-weight: 500;
+  margin-bottom: 30px;
+
+  animation: moveInRight 1s ease-out;
+ 
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 </style>

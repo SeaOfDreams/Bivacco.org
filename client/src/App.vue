@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <app-header />    
-    <router-view />    
+    <app-header />
+    <router-view />  
+        
   </div>
 </template>
 
@@ -28,6 +29,13 @@ export default {
 body {
   font-family: 'Maven Pro', sans-serif;
 }
+
+.has-navbar-fixed-top {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
 
 
 </style>

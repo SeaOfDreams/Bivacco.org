@@ -185,7 +185,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 120px;
 }
 
 .header {

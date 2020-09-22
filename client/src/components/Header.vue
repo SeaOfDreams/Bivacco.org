@@ -4,10 +4,10 @@
     
       <template slot="brand">
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
-          
+                     
           <img
             class="logo"
-            src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
+            src="../assets/bivacco-org.svg"
             alt="bivacco.org"
           />
         </b-navbar-item>
@@ -31,6 +31,13 @@
   </b-navbar>
   
 </template>
+
+<script>
+export default {
+  name: "Header",
+};
+
+</script>
 
 <style>
 

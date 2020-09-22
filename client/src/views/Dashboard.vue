@@ -80,7 +80,7 @@ export default {
 .container_incidenti {
   font-family: 'Maven Pro', sans-serif;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 150px auto 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -143,7 +143,7 @@ button.vedi_gita:hover {
   background-color: #FDA942;
 }
 
-button.vedi_gita:focus {
+button.vedi_gita:visited {
   border: none;
 }
 
@@ -168,4 +168,6 @@ button.vedi_gita:focus {
 b-tooltip {
   background: #F26522;
 }
+
+
 </style>
