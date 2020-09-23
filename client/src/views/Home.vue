@@ -13,7 +13,7 @@
 
     <section class="primary">
       <div class="primary-container">
-        <p class="main-text">Bivacco.org nasce da una semplice constatazione a cui sono arrivato nel mio lavoro di Guida Alpina: spesso, alla base di un gran numero di incidenti in montagna (per quanto ogni evento sia diverso dall'altro), vi sono una serie di errori "ricorrenti".<br><br>
+        <p class="main-text">Bivacco.org nasce da una semplice constatazione: spesso, alla base di un gran numero di incidenti in montagna (per quanto ogni evento sia diverso dall'altro), vi sono una serie di errori "ricorrenti".<br><br>
         Mentre in molti Paesi Europei (Francia, Svizzera, Austria) esistono strumenti di "condivisione" sulle dinamiche che hanno portato all'originarsi di tali incidenti, in un'ottica di prevenzione, in Italia non esiste niente di tutto ciò.
         L'obiettivo è quindi quello di creare un database dove si possano condividere informazioni utili a tutti gli amanti degli sport di montagna, per diffondere tale conoscenza e migliorare la sicurezza in tal senso.<br><br>
         Ricordiamoci comunque che il rischio "0" in montagna non esiste e che ogni situazione va valutata singolarmente e inquadrate nelle sue circostanze particolari.</p>
