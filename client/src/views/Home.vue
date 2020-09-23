@@ -1,16 +1,24 @@
 <template>
   <div class="container_home">
+
     <div class="header-container">
       <div class="title">
-
         <h1 class="title-primary">
           <span class="title-main">bivacco</span>          
           <span class="title-sub">Condividere per prevenire</span>
-        </h1>        
-   
-      </div>
-    </div>
+        </h1>   
+      </div><!-- End Title -->
+    </div><!-- End header-container -->
     
+
+    <section class="primary">
+      <div class="primary-container">
+        <p class="main-text">Bivacco.org nasce da una semplice constatazione a cui sono arrivato nel mio lavoro di Guida Alpina: spesso, alla base di un gran numero di incidenti in montagna (per quanto ogni evento sia diverso dall'altro), vi sono una serie di errori "ricorrenti".<br><br>
+        Mentre in molti Paesi Europei (Francia, Svizzera, Austria) esistono strumenti di "condivisione" sulle dinamiche che hanno portato all'originarsi di tali incidenti, in un'ottica di prevenzione, in Italia non esiste niente di tutto ciò.
+        L'obiettivo è quindi quello di creare un database dove si possano condividere informazioni utili a tutti gli amanti degli sport di montagna, per diffondere tale conoscenza e migliorare la sicurezza in tal senso.<br><br>
+        Ricordiamoci comunque che il rischio "0" in montagna non esiste e che ogni situazione va valutata singolarmente e inquadrate nelle sue circostanze particolari.</p>
+      </div><!-- End primary container -->
+    </section><!-- End section primary -->
   </div>
 </template>
 
@@ -31,6 +39,7 @@ export default {
   background-size: cover;
   background-position: top;
   position: relative;
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -100,6 +109,22 @@ export default {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.primary-container {
+  max-width: 1200px;
+  text-align: center;
+  padding: 50px;
+  margin: 0 auto;
+}
+
+p.main-text {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+  line-height: 1.6;
+  /* line-height: 1.3; */
 }
 
 
