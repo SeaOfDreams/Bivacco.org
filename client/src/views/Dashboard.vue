@@ -99,7 +99,11 @@ export default {
 h1,
 h3.header {
   text-align: center;
-  font-size: 32px;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 38px;
+  color: #000; 
+  margin-bottom: 40px;
+  font-weight: 600;
   margin-bottom: 30px;
   
 }

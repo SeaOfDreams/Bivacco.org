@@ -190,14 +190,17 @@ form {
 
 .header {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   padding-top: 20px;
 }
 
 
   .titolo {
-    font-size: 32px;
-    margin-bottom: 30px;
+  text-align: center;  
+  font-size: 38px;
+  color: #000; 
+  font-weight: 600;
+  margin-bottom: 60px;
   }
 
   label {
