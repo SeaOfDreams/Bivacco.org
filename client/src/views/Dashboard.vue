@@ -1,24 +1,26 @@
 <template>
   <div id="dashboard">
     <div class="container_incidenti">
-      <h3 class="header">Incidenti</h3>
-      <div class="card-horizontal" v-for="incidente in incidenti" v-bind:key="incidente.id">
-        
+      <div class="cards-container">
+        <h3 class="header">Incidenti</h3>
+        <div class="card-horizontal" v-for="incidente in incidenti" v-bind:key="incidente.id">
+          
           <div class="card-content">
             <div class="top_card">
               <p class="inizio_card">{{incidente.Data}} - Autore: {{incidente.Autore}}</p><span class="titolo">{{incidente.Titolo}}</span>
               <p class="luogo">Luogo: {{incidente.luogo}}</p>
               <span class="attività">{{incidente.attivita_praticata}}</span>
+              <img class="activity-img" src="incidente.icona" alt="">
               
-            </div>          
-          </div>
+            </div><!-- End of top_card -->          
+          </div><!-- End of card-content -->
           <div class="card-action">
             <router-link v-bind:to="{name:'vedi-incidente', params: {incidente_id: incidente.incidente_id}}"><button class="vedi_gita">Vedi</button>
             </router-link>
-          </div> 
-        
-      </div>
-    </div>      
+          </div><!-- End of card-action --> 
+        </div><!-- End of card-horizontal -->
+      </div><!-- End of cards-container -->
+    </div><!-- End of container_incindenti -->      
 
     <div class="fixed-action-btn">              
       <router-link to="/add" class="float">      
@@ -26,8 +28,8 @@
           <i class="fa fa-plus my-float"></i>   
         </b-tooltip>     
       </router-link>      
-    </div>  
-  </div>
+    </div><!-- End of fixed-action-btn -->  
+  </div><!-- End of dashboard -->
 </template>
 
 <script>
@@ -64,7 +66,8 @@ export default {
             'prep_fisica': doc.data().prep_fisica,
             'commento': doc.data().commento,
             'intervento_soccorso': doc.data().intervento_soccorso,
-            'luogo': doc.data().luogo
+            'luogo': doc.data().luogo,
+            'icona': doc.data().icona
             }
             
             this.incidenti.push(data);
@@ -78,11 +81,20 @@ export default {
 
 
 .container_incidenti {
-  font-family: 'Maven Pro', sans-serif;
-  max-width: 1100px;
-  margin: 150px auto 0 auto;
+  font-family: 'Maven Pro', sans-serif;  
+  margin: 150px auto 0 auto;  
+}
+
+.cards-container {
+  max-width: 780px;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card-content {
+  padding-top: 1rem;
 }
 
 .card-horizontal {
@@ -106,6 +118,16 @@ h3.header {
   font-weight: 600;
   margin-bottom: 30px;
   
+}
+
+.top_card {
+  position: relative;
+}
+
+img.activity-img {
+  position: absolute;
+  top: 1px;
+  right: 3px;
 }
 
 p.luogo {

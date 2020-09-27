@@ -117,7 +117,8 @@ export default {
       prep_fisica: null,
       commento: null,
       intervento_soccorso: null,
-      luogo: null
+      luogo: null,
+      icona: null
     };
   },
   beforeRouteEnter(to, from, next) {
@@ -143,7 +144,9 @@ export default {
             vm.prep_fisica = doc.data().prep_fisica,
             vm.commento = doc.data().commento,
             vm.intervento_soccorso = doc.data().intervento_soccorso,
-            vm.luogo = doc.data().luogo;
+            vm.luogo = doc.data().luogo,
+            vm.icona = doc.data().icona           
+
           });
         });
       });
@@ -175,6 +178,7 @@ export default {
             this.commento = doc.data().commento;
             this.intervento_soccorso = doc.data().intervento_soccorso;
             this.luogo = doc.data().luogo;
+            this.icona = doc.data().icona;
           });
         });
     },
@@ -185,7 +189,11 @@ export default {
 <style scoped>
 .container_incidente {
   max-width: 1100px;
-  margin: 0 auto;
+  margin-top: 120px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  
   font-family: "Maven Pro", sans-serif;
   padding-top: 20px;
 }
@@ -254,6 +262,8 @@ span.attività {
 
 .back {
   text-align: center;
+  padding-top: 30px;
+  margin-top: 50px;
 }
 
 button.is-primary { 
