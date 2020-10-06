@@ -35,7 +35,9 @@
     <section class="secondary">
       <div class="secondary-container">
         <article>
-          <i class="article-icon-left" data-vi="gem" data-vi-size="45" data-vi-primary="#F26522"></i>
+          <div class="article-icon">
+            <i data-vi="gem" data-vi-size="45" data-vi-primary="#F26522"></i>
+          </div>
           <h3 class="article-title">
             La tua
             <strong>
@@ -49,7 +51,9 @@
         </article>
 
         <article>
-          <i class="article-icon-left" data-vi="user" data-vi-size="45" data-vi-primary="#F26522"></i>
+          <div class="article-icon">
+            <i data-vi="user" data-vi-size="45" data-vi-primary="#F26522"></i>
+          </div>
           <h3 class="article-title">
             <strong>
               <span class="article-span">Chi</span>
@@ -62,7 +66,9 @@
         </article>
 
         <article>
-          <i class="article-icon-right" data-vi="tag" data-vi-size="45" data-vi-primary="#F26522"></i>
+          <div class="article-icon">
+            <i data-vi="tag" data-vi-size="45" data-vi-primary="#F26522"></i>
+          </div>
           <h3 class="article-title">
             <strong>
               <span class="article-span">Cosa</span>
@@ -75,12 +81,13 @@
         </article>
 
         <article>
+          <div class="article-icon">
           <i
-            class="article-icon-right"
             data-vi="shield"
             data-vi-size="45"
             data-vi-primary="#F26522"
           ></i>
+          </div>
           <h3 class="article-title">
             Proteggiamo la
             <strong>
@@ -291,5 +298,9 @@ a.button.is-primary.vedi:hover {
 
 a.button.is-primary.aggiunta:hover {
   background: #5438a1;
+}
+
+.article-icon {
+  transform: translateX(-8px);
 }
 </style>

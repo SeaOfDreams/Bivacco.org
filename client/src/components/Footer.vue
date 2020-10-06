@@ -14,7 +14,7 @@
       </div>
 
       <div class="links">
-      <a href="https://www.iubenda.com/privacy-policy/61950109">Privacy policy</a> - <a href="https://www.iubenda.com/privacy-policy/61950109/cookie-policy">Cookie policy</a> - Icons by <a href="https://icons8.com/icons">Icons8</a>
+      <a href="https://www.iubenda.com/privacy-policy/61950109">Privacy policy</a> - <a href="https://www.iubenda.com/privacy-policy/61950109/cookie-policy">Cookie policy</a> - Icons by <a href="https://webkul.github.io/vivid/docs.html">Vivid Icons</a>
       </div>
 
     </div>

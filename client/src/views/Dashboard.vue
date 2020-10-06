@@ -7,10 +7,10 @@
           
           <div class="card-content">
             <div class="top_card">
-              <p class="inizio_card">{{incidente.Data}} - Autore: {{incidente.Autore}}</p><span class="titolo">{{incidente.Titolo}}</span>
+              <p class="inizio_card">{{incidente.Data | formatDate}} - Autore: {{incidente.Autore}}</p><span class="titolo">{{incidente.Titolo}}</span>
               <p class="luogo">Luogo: {{incidente.luogo}}</p>
               <span class="attività">{{incidente.attivita_praticata}}</span>
-              <img class="activity-img" src="incidente.icona" alt="">
+              <img class="activity-img" v-bind:src="incidente.icona" alt="">
               
             </div><!-- End of top_card -->          
           </div><!-- End of card-content -->
@@ -20,7 +20,7 @@
           </div><!-- End of card-action --> 
         </div><!-- End of card-horizontal -->
       </div><!-- End of cards-container -->
-    </div><!-- End of container_incindenti -->      
+    </div><!-- End of container_incidenti -->      
 
     <div class="fixed-action-btn">              
       <router-link to="/add" class="float">      
@@ -34,6 +34,9 @@
 
 <script>
 import db from "../components/firebaseInit"
+
+
+
 export default {
   name: "Dashboard",
   data() {
@@ -48,6 +51,11 @@ export default {
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
+
+/*           let iconaUrl;
+ */
+          /* switch per i vari casi di attività */
+          
           const data = {
             'id': doc.id,
             'incidente_id': doc.data().incidente_id,
@@ -75,6 +83,10 @@ export default {
       })
   }
 }
+
+
+
+/*  */
 </script>
 
 <style scoped>
