@@ -51,34 +51,30 @@ export default {
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-
-/*           let iconaUrl;
- */
-          /* switch per i vari casi di attività */
           
-          const data = {
-            'id': doc.id,
-            'incidente_id': doc.data().incidente_id,
-            'attivita_praticata': doc.data().attivita_praticata,
-            'tipo_di_evento': doc.data().tipo_di_evento,
-            'Autore': doc.data().Autore,
-            'Titolo': doc.data().Titolo,
-            'Data': doc.data().Data,
-            'grado_pericolo_valanghe': doc.data().grado_pericolo_valanghe,
-            'alt_max_ragg': doc.data().alt_max_ragg,
-            'nr_partecipanti': doc.data().nr_partecipanti,
-            'nr_persone_coinvolte': doc.data().nr_persone_coinvolte,
-            'descrizione': doc.data().descrizione,
-            'condizioni_meteo': doc.data().condizioni_meteo,
-            'misure_prevenzione': doc.data().misure_prevenzione,
-            'prep_fisica': doc.data().prep_fisica,
-            'commento': doc.data().commento,
-            'intervento_soccorso': doc.data().intervento_soccorso,
-            'luogo': doc.data().luogo,
-            'icona': doc.data().icona
-            }
+        const data = {
+          'id': doc.id,
+          'incidente_id': doc.data().incidente_id,
+          'attivita_praticata': doc.data().attivita_praticata,
+          'tipo_di_evento': doc.data().tipo_di_evento,
+          'Autore': doc.data().Autore,
+          'Titolo': doc.data().Titolo,
+          'Data': doc.data().Data,
+          'grado_pericolo_valanghe': doc.data().grado_pericolo_valanghe,
+          'alt_max_ragg': doc.data().alt_max_ragg,
+          'nr_partecipanti': doc.data().nr_partecipanti,
+          'nr_persone_coinvolte': doc.data().nr_persone_coinvolte,
+          'descrizione': doc.data().descrizione,
+          'condizioni_meteo': doc.data().condizioni_meteo,
+          'misure_prevenzione': doc.data().misure_prevenzione,
+          'prep_fisica': doc.data().prep_fisica,
+          'commento': doc.data().commento,
+          'intervento_soccorso': doc.data().intervento_soccorso,
+          'luogo': doc.data().luogo,
+          'icona': doc.data().icona
+          }
             
-            this.incidenti.push(data);
+          this.incidenti.push(data);
         })
       })
   }
