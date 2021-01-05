@@ -105,13 +105,9 @@
 
     <section class="third-section">
       <div class="buttons">
-        <a class="button is-primary vedi" tag="router-link" :to="{ path: '/dashboard' }">
-          <strong>Vedi incidenti -></strong>
-        </a>
+        <router-link class="button is-primary vedi" :to="{ path: '/dashboard' }"><strong>Vedi incidenti -></strong></router-link>
         <h4>oppure</h4>
-        <a class="button is-primary aggiunta" tag="router-link" :to="{ path: '/dashboard' }">
-          <strong>Inserisci incidente -></strong>
-        </a>
+        <router-link class="button is-primary aggiunta" :to="{ path: '/add' }"><strong>Inserisci incidente -></strong></router-link>
       </div>
     </section>
   </div>

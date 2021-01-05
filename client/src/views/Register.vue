@@ -21,7 +21,7 @@
         </b-field>
 
         <b-field label="Password">
-          <b-input v-model="password" type="password" password-reveal>
+          <b-input v-model="password" type="password" placeholder="Scegli una password tra i 6 e i 30 caratteri" password-reveal>
           </b-input>
         </b-field>
 
@@ -97,7 +97,7 @@ label {
 .signin-form {
   width: 400px;
   margin: 30px auto;
-  border: 1px solid #eee;
+  border: 1px solid #d9d4d4;
   padding: 20px;
   box-shadow: 0 2px 3px #ccc;
 }

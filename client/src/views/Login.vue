@@ -5,14 +5,13 @@
         <b-field label="Email">
           <b-input
             type="email"
-            placeholder="Inserisci la tua email"
             maxlength="30"
             v-model="email">
           </b-input>
         </b-field>
 
         <b-field label="Password">
-          <b-input type="password" v-model="password" placeholder="Scegli una password tra i 6 e i 30 caratteri" password-reveal>
+          <b-input type="password" v-model="password" password-reveal>
           </b-input>
         </b-field>
 
@@ -84,9 +83,10 @@ label {
 .signin-form {
   width: 400px;
   margin: 30px auto;
-  border: 1px solid #eee;
+  border: 1px solid #d9d4d4;
   padding: 20px;
   box-shadow: 0 2px 3px #ccc;
+  
 }
 
 .input {

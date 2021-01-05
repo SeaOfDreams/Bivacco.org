@@ -20,10 +20,8 @@
         
         <b-navbar-item tag="div">
           <div class="buttons">
-            <a class="button is-primary"  tag="router-link" :to="{ path: '/register' }">
-              <strong>Registrati</strong>
-            </a>
-            <a class="button is-light" tag="router-link" :to="{ path: '/signin' }">Log in</a>
+            <router-link class="button is-primary" :to="{ path: '/register' }">Register</router-link>
+            <router-link class="button is-light" :to="{ path: '/signin' }">Log in</router-link>
           </div>
         </b-navbar-item>
      </template>
