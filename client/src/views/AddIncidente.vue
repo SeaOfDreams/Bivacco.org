@@ -120,8 +120,12 @@
 </template>
 
 <script>
+/* eslint-disable no-unused-vars */
 import db from '../components/firebaseInit'
+import emailjs from 'emailjs-com'
+
 export default {
+  
   name: "aggiungi-incidente",
   data() {
     return {
@@ -147,10 +151,9 @@ export default {
   
 /* eslint-disable no-unused-vars */
   methods: {
-    salvaIncidente () {
+      salvaIncidente (e) {
       db.collection('incidenti').add({
         Autore: this.Autore,
-        incidente_id: this.incidente_id,
         attivita_praticata: this.attivita_praticata,
         Data: this.Data,
         luogo: this.luogo,
@@ -168,8 +171,37 @@ export default {
         intervento_soccorso: this.intervento_soccorso
 
     }).then(docRef => this.$router.push())
-    .catch(err => console.log(err))
-  }
+    .catch(err => console.log(err));
+    try {
+          emailjs.sendForm('service_vna6o2g', 'template_4u3ylio', e.target,
+          'user_pG9Ddcf3K98OFcXFd4txk', {
+            Titolo: this.Titolo
+          })
+
+        } catch(error) {
+            console.log({error})
+        }
+
+        // Reset form field
+      this.Autore = '',
+      this.attivita_praticata = '',
+      this.Data = '',
+      this.luogo = '',
+      this.tipo_di_incidente = '',
+      this.Titolo = '',
+      this.grado_pericolo_valanghe = '',
+      this.alt_max_ragg = '',
+      this.nr_partecipanti = '',
+      this.nr_persone_coinvolte = '',
+      this.descrizione = '',
+      this.condizioni_meteo = '',
+      this.misure_prevenzione = '',
+      this.prep_fisica = '',
+      this.commento = '',
+      this.intervento_soccorso = ''
+
+  }, 
+  
   }
 }
 </script>
