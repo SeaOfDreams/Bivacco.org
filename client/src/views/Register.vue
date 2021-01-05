@@ -1,67 +1,34 @@
 <template>
-  <!-- <div>
-    <h1>Registrati</h1>
+  <div class="outer-container">
+    <div class="container-form-login">
+      <form class="signin-form" action="">
+        <b-field label="Email">
+          <b-input
+            type="email"
+            placeholder="Inserisci la tua email"
+            maxlength="30"
+            v-model="email"
+          >
+          </b-input>
+        </b-field>
 
-    <form class="form">
-      <input type="text" name="nome" placeholder="Nome" v-model="nome" />
-      <input type="text" name="cognome" placeholder="Cognome" v-model="cognome" />
-      <input type="text" name="collegio" placeholder="Collegio di appartenenza" v-model="collegio" />
-      <input type="email" name="email" placeholder="Email" v-model="email" />
-      <input type="password" name="password" placeholder="Password" v-model="password" />
-      <button @click="register">Registrati</button>
-    </form>
-  </div> -->
+        <b-field label="Nickname">
+          <b-input
+            v-model="nickname"
+            placeholder="Scegli il tuo nickname"
+            maxlength="30"
+          ></b-input>
+        </b-field>
 
-<div id="signup">
-    <h1>Registrati</h1>
-    <div class="signup-form">
-      <form>
-        <div class="input">
-          <label for="nome">Nome</label>
-          <input
-                  type="text"
-                  id="nome"
-                  v-model="nome">
-        </div>
+        <b-field label="Password">
+          <b-input v-model="password" type="password" password-reveal>
+          </b-input>
+        </b-field>
 
-        <div class="input">
-          <label for="cognome">Cognome</label>
-          <input
-                  type="text"
-                  id="cognome"
-                  v-model="cognome">
-        </div>
-
-          <div class="input">
-          <label for="collegio">Collegio di appartenenza</label>
-          <input
-                  type="text"
-                  id="collegio"
-                  v-model="collegio">
-        </div>
-
-        <div class="input">
-          <label for="email">E-mail</label>
-          <input
-                  type="email"
-                  id="email"
-                  v-model="email">
-        </div>
-        
-        <div class="input">
-          <label for="password">Password</label>
-          <input
-                  type="password"
-                  id="password"
-                  v-model="password">
-        </div>
-        
-        <!-- <div class="input inline">
-          <input type="checkbox" id="terms" v-model="terms">
-          <label for="terms">Accetto i termini d'uso</label>
-        </div> -->
-        <div class="submit">
-          <button @click="register" type="submit">Registrati</button>
+        <div class="row">
+          <button @click="register" type="submit" class="btn add-incidente">
+            Registrati
+          </button>
         </div>
       </form>
     </div>
@@ -69,49 +36,70 @@
 </template>
 
 <script>
-import Authservices from "@/services/Authservices";
+/* eslint-disable no-unused-vars */
+import firebase from "firebase";
 
 export default {
   name: "Register",
 
   data() {
     return {
-      nome: "",
-      cognome: "",
-      collegio: "",
       email: "",
+      nickname: "",
       password: "",
-      terms: false,
     };
   },
-
   methods: {
-    async register () {
-      const response = await Authservices.register({
-        nome: this.nome,
-        cognome: this.cognome,
-        collegio: this.collegio,
-        email: this.email,
-        password: this.password
-      })        
-      console.log(response.data);
+    register: function (e) {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.email, this.password)
+        .then(
+          (user) => {
+            alert("Account creato");
+            this.$router.push("/dashboard");
+          },
+          (err) => {
+            alert(err.message);
+          }
+        );
+      e.preventDefault();
     },
   },
 };
+
 </script>
 
 <style scoped>
+.outer-container {
+  padding-top: 50px;
+}
+
+.container-form-login {
+  font-family: "Maven Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.row {
+  text-align: center;
+}
 
 h1 {
   text-align: center;
 }
-.signup-form {
+
+label {
+  font-size: 15px;
+}
+.signin-form {
   width: 400px;
   margin: 30px auto;
   border: 1px solid #eee;
   padding: 20px;
   box-shadow: 0 2px 3px #ccc;
-  
 }
 
 .input {
@@ -122,16 +110,6 @@ h1 {
   display: block;
   color: #4e4e4e;
   margin-bottom: 6px;
-  }
-
-label {
-    font-size: 15px;
-  }
-
-
-.input.inline label {
-  display: inline;
-  
 }
 
 .input input {
@@ -142,19 +120,10 @@ label {
   border: 1px solid #ccc;
 }
 
-.input.inline input {
-  width: auto;
-}
-
 .input input:focus {
   outline: none;
   border: 1px solid #521751;
   background-color: #eee;
-}
-
-.input select {
-  border: 1px solid #ccc;
-  font: inherit;
 }
 
 .submit {
@@ -163,17 +132,15 @@ label {
 }
 
 .submit button {
- 
   padding: 15px 20px;
   background-color: #fa923f;
   color: white;
   border: none;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: "Maven Pro", sans-serif;
   font-size: 16px;
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
-  
 }
 
 .submit button:hover,
