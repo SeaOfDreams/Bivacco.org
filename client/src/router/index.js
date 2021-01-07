@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
@@ -6,11 +7,12 @@ import Dashboard from '../views/Dashboard.vue'
 import Login from '../views/Login.vue'
 import AddIncidente from '../views/AddIncidente.vue'
 import VediIncidente from '../views/VediIncidente.vue'
+import firebase from 'firebase'
 
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'home',
@@ -19,7 +21,10 @@ Vue.use(VueRouter)
   {
     path: '/register',
     name: 'register',
-    component: Register
+    component: Register,
+    meta: {
+      requiresGuest: true
+    }
   },
   {
     path: '/dashboard',
@@ -29,20 +34,26 @@ Vue.use(VueRouter)
   {
     path: '/signin',
     name: 'Login',
-    component: Login
+    component: Login,
+    meta: {
+      requiresGuest: true
+    }
   },
   {
     path: '/add',
     name: 'aggiungi-incidente',
-    component: AddIncidente
+    component: AddIncidente,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: '/:incidente_id',
     name: 'vedi-incidente',
     component: VediIncidente
   },
-  
-  
+
+
 ]
 
 
@@ -51,6 +62,42 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  //Check for guards
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    //check if not logged in
+    if (!firebase.auth().currentUser) {
+      next({
+        path: '/register',
+        
+        query: {
+          redirect: to.fullPath
+        }
+
+      });
+    } else {
+      next();
+    }
+  } else if (to.matched.some(record => record.meta.requiresGuest)) {
+    //check if logged in
+    if (firebase.auth().currentUser) {
+      next({
+        path: '/',
+        query: {
+          redirect: to.fullPath
+        }
+
+      });
+    } else {
+      next();
+    }
+    
+  } else {
+    next();
+  }
+
 })
 
 export default router

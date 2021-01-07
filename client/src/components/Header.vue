@@ -20,8 +20,9 @@
         
         <b-navbar-item tag="div">
           <div class="buttons">
-            <router-link class="button is-primary" :to="{ path: '/register' }">Register</router-link>
-            <router-link class="button is-light" :to="{ path: '/signin' }">Log in</router-link>
+            <router-link class="button is-primary" v-if="!isLoggedIn" :to="{ path: '/register' }">Register</router-link>
+            <router-link class="button is-light" v-if="!isLoggedIn" :to="{ path: '/signin' }">Log in</router-link>
+            <button class="button is-primary" v-if="isLoggedIn" @click="logout" >Log out</button>
           </div>
         </b-navbar-item>
      </template>
@@ -31,8 +32,32 @@
 </template>
 
 <script>
+/* eslint-disable no-unused-vars */
+import firebase from 'firebase'
+
 export default {
   name: "Header",
+  data() {
+    return {
+      isLoggedIn: false,
+      currentUser: false
+
+    }
+  },
+  created() {
+    if(firebase.auth().currentUser) {
+      this.isLoggedIn = true;
+      this.currentUser = firebase.auth().currentUser.email;
+    }
+  },
+
+  methods: {
+    logout: function() {
+      firebase.auth().signOut().then(() => {
+        this.$router.push('/');
+      })
+    }
+  }
 };
 
 </script>
@@ -59,6 +84,14 @@ h1.title {
 
 .start {
   margin-left: 20px;
+}
+
+button.button.is-primary {
+  background-color: #F26522;
+}
+
+button.button.is-primary:hover {
+  background-color: #Fda942;
 }
 
 a.button.is-primary {
