@@ -38,7 +38,9 @@ body {
   padding: 0 !important;
 }
 
-  .btn.add-incidente {  
+
+
+.btn.add-incidente {  
   min-width: 120px;
   padding: 10px 30px;
   background-color: #F26522;  
@@ -49,11 +51,13 @@ body {
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 50px;
+  margin-bottom: 12px;
   margin-top: 20px;
 }
 
-
+.already_registered {
+  text-align: center;
+}
 
 
 </style>

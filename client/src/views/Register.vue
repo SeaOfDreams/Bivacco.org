@@ -1,6 +1,7 @@
 <template>
   <div class="outer-container">
     <div class="container-form-login">
+      <h3 class="header">Registrati per inserire un incidente</h3>
       <form class="signin-form" action="">
         <b-field label="Email">
           <b-input
@@ -12,13 +13,7 @@
           </b-input>
         </b-field>
 
-        <b-field label="Nickname">
-          <b-input
-            v-model="nickname"
-            placeholder="Scegli il tuo nickname"
-            maxlength="30"
-          ></b-input>
-        </b-field>
+    
 
         <b-field label="Password">
           <b-input v-model="password" type="password" placeholder="Scegli una password tra i 6 e i 30 caratteri" password-reveal>
@@ -29,6 +24,10 @@
           <button @click="register" type="submit" class="btn add-incidente">
             Registrati
           </button>
+        </div>
+        <div class="privacy">Cliccando sul pulsante dichiari di aver preso visione della <a href="https://www.iubenda.com/privacy-policy/61950109">Privacy Policy</a></div>
+        <div class="already_registered">
+          <h4>Sei già registrato? Vai al <router-link to="/signin">Login</router-link></h4>
         </div>
       </form>
     </div>
@@ -45,7 +44,6 @@ export default {
   data() {
     return {
       email: "",
-      nickname: "",
       password: "",
     };
   },
@@ -83,13 +81,22 @@ export default {
   margin-top: 120px;
 }
 
+h1,
+h3.header {
+  text-align: center;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 38px;
+  color: #000; 
+  margin-bottom: 40px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  
+}
+
 .row {
   text-align: center;
 }
 
-h1 {
-  text-align: center;
-}
 
 label {
   font-size: 15px;
@@ -129,6 +136,7 @@ label {
 .submit {
   text-align: center;
   margin-top: 2rem;
+  
 }
 
 .submit button {
@@ -141,6 +149,7 @@ label {
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
+  
 }
 
 .submit button:hover,
@@ -157,4 +166,12 @@ label {
   color: #ccc;
   cursor: not-allowed;
 }
+
+.privacy {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 30px;
+  padding: 0 25px;
+}
+
 </style>

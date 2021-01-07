@@ -5,7 +5,7 @@ import router from './router'
 import './../node_modules/bulma/css/bulma.css'
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
-import moment from 'moment'
+/* import moment from 'moment' */
 import firebase from 'firebase'
 import './components/firebaseInit'
 
@@ -24,9 +24,9 @@ firebase.auth().onAuthStateChanged(user => {
 })
 
 
-
+/* 
 Vue.filter('formatDate', function(value) {
   if (value) {
-    return moment(String(value)).format('LL')
+    return moment(String(value)).format('MM/DD/YYYY')
   }
-});
+}); */

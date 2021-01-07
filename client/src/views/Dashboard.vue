@@ -3,11 +3,11 @@
     <div class="container_incidenti">
       <div class="cards-container">
         <h3 class="header">Incidenti</h3>
-        <div class="card-horizontal" v-for="incidente in incidenti" v-bind:key="incidente.id">
+        <div class="card-horizontal"  v-for="incidente in incidenti"  v-bind:key="incidente.id">
           
           <div class="card-content">
             <div class="top_card">
-              <p class="inizio_card">{{incidente.Data | formatDate}} - Autore: {{incidente.Autore}}</p><span class="titolo">{{incidente.Titolo}}</span>
+              <p class="inizio_card"> {{incidente.Data}} - Autore: {{incidente.Autore}}</p><span class="titolo">{{incidente.Titolo}}</span>
               <p class="luogo">Luogo: {{incidente.luogo}}</p>
               <span class="attività">{{incidente.attivita_praticata}}</span>
               <img class="activity-img" v-bind:src="incidente.icona" alt="">
@@ -34,6 +34,8 @@
 
 <script>
 import db from "../components/firebaseInit"
+/* import format from 'date-fns/format' */
+
 
 
 
@@ -41,11 +43,19 @@ export default {
   name: "Dashboard",
   data() {
     return {
-      incidenti: [], 
+      incidenti: [],
+      /* format  */
       
       
     }
   },
+  /* methods: { 
+      /* format_date(value){
+         if (value) {
+           return moment(String(value)).format('MM/DD/YYYY hh:mm')
+          }
+      },
+   }, */ 
   created() {
     db.collection("incidenti").orderBy('Data')      
       .get()
@@ -71,18 +81,19 @@ export default {
           'commento': doc.data().commento,
           'intervento_soccorso': doc.data().intervento_soccorso,
           'luogo': doc.data().luogo,
-          'icona': doc.data().icona
+          'icona': doc.data().icona,
+          'revised': doc.data().revised
           }
             
           this.incidenti.push(data);
         })
       })
-  }
+  },
+ 
 }
 
 
 
-/*  */
 </script>
 
 <style scoped>

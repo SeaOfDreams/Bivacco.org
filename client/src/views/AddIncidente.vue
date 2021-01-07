@@ -9,6 +9,13 @@
       <form @submit.prevent="salvaIncidente">
 
         <div class="field">          
+          <label class="label">Autore</label>       
+          <div class="control">
+            <input class="input" type="text" placeholder="Scegli se usare un nickname o inserire il tuo nome" v-model="Autore" required>
+          </div>
+        </div>
+
+        <div class="field">          
           <label class="label">Titolo Incidente</label>       
           <div class="control">
             <input class="input" type="text" placeholder="Dai un titolo descrittivo" v-model="Titolo" required>
@@ -58,7 +65,7 @@
         </div>
 
         <b-field label="Grado pericolo valanghe">
-            <b-numberinput controls-position="compact" min="1" max="5" v-model="grado_pericolo_valanghe" required>
+            <b-numberinput controls-position="compact" min="1" max="5" v-model="grado_pericolo_valanghe">
             </b-numberinput>
         </b-field>
 
@@ -129,6 +136,7 @@ export default {
   name: "aggiungi-incidente",
   data() {
     return {
+      autore: null,
       incidente_id: null,
       Titolo: null,
       attivita_praticata: null,
@@ -226,8 +234,7 @@ form {
   padding-top: 20px;
 }
 
-
-  .titolo {
+.titolo {
   text-align: center;  
   font-size: 38px;
   color: #000; 
@@ -248,6 +255,8 @@ form {
 .row {
   text-align: center;
 }
+
+
 
 
 

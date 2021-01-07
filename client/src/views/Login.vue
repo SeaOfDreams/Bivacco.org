@@ -6,17 +6,22 @@
           <b-input
             type="email"
             maxlength="30"
+            placeholder="Inserisci la tua email"
             v-model="email">
           </b-input>
         </b-field>
 
         <b-field label="Password">
-          <b-input type="password" v-model="password" password-reveal>
+          <b-input type="password" v-model="password" placeholder="Min 6 - Max 30 caratteri" password-reveal>
           </b-input>
         </b-field>
 
         <div class="row">
           <button @click="login" type="submit" class="btn add-incidente">Login</button>
+        </div>
+
+        <div class="already_registered">
+          <h4>Non sei registrato? <router-link to="/register">Registrati</router-link> ora</h4>
         </div>
       </form>
     </div>

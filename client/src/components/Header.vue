@@ -86,13 +86,6 @@ h1.title {
   margin-left: 20px;
 }
 
-button.button.is-primary {
-  background-color: #F26522;
-}
-
-button.button.is-primary:hover {
-  background-color: #Fda942;
-}
 
 a.button.is-primary {
   background-color: #F26522;
