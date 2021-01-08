@@ -3,7 +3,7 @@
     <div class="container_incidenti">
       <div class="cards-container">
         <h3 class="header">Incidenti</h3>
-        <div class="card-horizontal"  v-for="incidente in incidenti"  v-bind:key="incidente.id">
+        <div class="card-horizontal"  v-for="incidente in revisedItems" v-bind:key="incidente.id">
           
           <div class="card-content">
             <div class="top_card">
@@ -33,7 +33,10 @@
 </template>
 
 <script>
+/* eslint-disable no-unused-vars */
+
 import db from "../components/firebaseInit"
+var _ = require('lodash')
 /* import format from 'date-fns/format' */
 
 
@@ -89,6 +92,15 @@ export default {
         })
       })
   },
+
+  computed: {
+    revisedItems: function() {
+      return _.pickBy(this.incidenti, function(u) {
+        return u.revised;
+      });
+    } 
+  }
+
  
 }
 

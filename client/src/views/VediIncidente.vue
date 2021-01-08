@@ -145,7 +145,8 @@ export default {
             vm.commento = doc.data().commento,
             vm.intervento_soccorso = doc.data().intervento_soccorso,
             vm.luogo = doc.data().luogo,
-            vm.icona = doc.data().icona           
+            vm.icona = doc.data().icona,
+            vm.revised = doc.data().revised           
 
           });
         });
@@ -179,6 +180,7 @@ export default {
             this.intervento_soccorso = doc.data().intervento_soccorso;
             this.luogo = doc.data().luogo;
             this.icona = doc.data().icona;
+            this.revised = doc.data().revised;
           });
         });
     },
