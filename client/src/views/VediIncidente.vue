@@ -2,7 +2,7 @@
   <div class="container_incidente">
     <div class="box-titolo">
       <span class="titolo">{{Titolo}}</span> -
-      <span class="data">{{Data}}</span>
+      <span class="data">{{Data | formatDate}}</span>
       <div class="luogo">{{luogo}}</div>
       <span class="attività">{{attivita_praticata}}</span>
     </div>
@@ -133,7 +133,7 @@ export default {
             vm.tipo_di_evento = doc.data().tipo_di_evento,
             vm.Autore = doc.data().Autore,
             vm.Titolo = doc.data().Titolo,
-            vm.Data = doc.data().Data,
+            vm.Data = doc.data().Data.toDate(''),
             vm.grado_pericolo_valanghe = doc.data().grado_pericolo_valanghe,
             vm.alt_max_ragg = doc.data().alt_max_ragg,
             vm.nr_partecipanti = doc.data().nr_partecipanti,
@@ -167,7 +167,7 @@ export default {
             this.Autore = doc.data().Autore;
             this.Titolo = doc.data().Titolo;
             this.tipo_di_evento = doc.data().tipo_di_evento;
-            this.Data = doc.data().Data;
+            this.Data = doc.data().Data.toDate('');
             this.grado_pericolo_valanghe = doc.data().grado_pericolo_valanghe;
             this.alt_max_ragg = doc.data().alt_max_ragg;
             this.nr_partecipanti = doc.data().nr_partecipanti;

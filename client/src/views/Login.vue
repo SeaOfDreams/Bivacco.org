@@ -7,21 +7,32 @@
             type="email"
             maxlength="30"
             placeholder="Inserisci la tua email"
-            v-model="email">
+            v-model="email"
+          >
           </b-input>
         </b-field>
 
         <b-field label="Password">
-          <b-input type="password" v-model="password" placeholder="Min 6 - Max 30 caratteri" password-reveal>
+          <b-input
+            type="password"
+            v-model="password"
+            placeholder="Min 6 - Max 30 caratteri"
+            password-reveal
+          >
           </b-input>
         </b-field>
 
         <div class="row">
-          <button @click="login" type="submit" class="btn add-incidente">Login</button>
+          <button @click="login" type="submit" class="btn add-incidente">
+            Login
+          </button>
         </div>
 
         <div class="already_registered">
-          <h4>Non sei registrato? <router-link to="/register">Registrati</router-link> ora</h4>
+          <h4>
+            Non sei registrato?
+            <router-link to="/register">Registrati</router-link> ora
+          </h4>
         </div>
       </form>
     </div>
@@ -38,7 +49,7 @@ export default {
   data() {
     return {
       email: "",
-      password: ""
+      password: "",
     };
   },
   methods: {
@@ -58,7 +69,6 @@ export default {
     },
   },
 };
-
 </script>
 
 <style scoped>
@@ -91,7 +101,6 @@ label {
   border: 1px solid #d9d4d4;
   padding: 20px;
   box-shadow: 0 2px 3px #ccc;
-  
 }
 
 .input {
@@ -122,28 +131,17 @@ label {
   text-align: center;
   margin-top: 2rem;
 }
-
-.submit button {
-  padding: 15px 20px;
-  background-color: #fa923f;
+button:hover,
+button:active {
+  background-color: #fda942;
   color: white;
+  outline: none;
   border: none;
-  font-family: "Maven Pro", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
-.submit button:hover,
-.submit button:active {
-  background-color: #c97532;
-  color: white;
-}
-
-.submit button[disabled],
-.submit button[disabled]:hover,
-.submit button[disabled]:active {
+button[disabled],
+button[disabled]:hover,
+button[disabled]:active {
   border: 1px solid #ccc;
   background-color: transparent;
   color: #ccc;

@@ -7,9 +7,9 @@
           
           <div class="card-content">
             <div class="top_card">
-              <p class="inizio_card"> {{incidente.Data}} - Autore: {{incidente.Autore}}</p><span class="titolo">{{incidente.Titolo}}</span>
+              <p class="inizio_card"> {{incidente.Data | formatDate}} - Autore: {{incidente.Autore}}</p><span class="titolo">{{incidente.Titolo}}</span>
               <p class="luogo">Luogo: {{incidente.luogo}}</p>
-              <span class="attività">{{incidente.attivita_praticata}}</span>
+              <span class="attività">{{incidente.attivita_praticata}} </span>
               <img class="activity-img" v-bind:src="incidente.icona" alt="">
               
             </div><!-- End of top_card -->          
@@ -37,7 +37,8 @@
 
 import db from "../components/firebaseInit"
 var _ = require('lodash')
-/* import format from 'date-fns/format' */
+
+
 
 
 
@@ -46,19 +47,10 @@ export default {
   name: "Dashboard",
   data() {
     return {
-      incidenti: [],
-      /* format  */
-      
-      
+      incidenti: []     
     }
   },
-  /* methods: { 
-      /* format_date(value){
-         if (value) {
-           return moment(String(value)).format('MM/DD/YYYY hh:mm')
-          }
-      },
-   }, */ 
+   
   created() {
     db.collection("incidenti").orderBy('Data')      
       .get()
@@ -72,7 +64,7 @@ export default {
           'tipo_di_evento': doc.data().tipo_di_evento,
           'Autore': doc.data().Autore,
           'Titolo': doc.data().Titolo,
-          'Data': doc.data().Data,
+          'Data': doc.data().Data.toDate(''),
           'grado_pericolo_valanghe': doc.data().grado_pericolo_valanghe,
           'alt_max_ragg': doc.data().alt_max_ragg,
           'nr_partecipanti': doc.data().nr_partecipanti,
@@ -194,6 +186,7 @@ button.vedi_gita {
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
+  outline: none;
 }
 
 button.vedi_gita:hover {

@@ -34,6 +34,7 @@
             <b-datepicker
                 ref="datepicker"
                 expanded
+                
                 placeholder="Seleziona una data"
                 v-model="Data" required>
             </b-datepicker>
@@ -131,6 +132,7 @@
 import db from '../components/firebaseInit'
 import emailjs from 'emailjs-com'
 
+
 export default {
   
   name: "aggiungi-incidente",
@@ -208,8 +210,9 @@ export default {
       this.commento = '',
       this.intervento_soccorso = ''
 
-  }, 
+  }
   
+
   }
 }
 </script>

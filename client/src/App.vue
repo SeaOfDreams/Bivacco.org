@@ -8,8 +8,11 @@
 </template>
 
 <script>
+/* eslint-disable no-unused-vars */
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+
 
 export default {
   name: "app",
@@ -18,6 +21,9 @@ export default {
     "app-footer": Footer
   },
 };
+
+
+
 </script>
 
 <style>
@@ -53,7 +59,23 @@ body {
   cursor: pointer;
   margin-bottom: 12px;
   margin-top: 20px;
+  outline: none;
 }
+
+.submit.btn.add-incidente button {
+  padding: 15px 20px;
+  background-color:#F26522;
+  color: white;
+  border: none;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none !important;
+}
+
+
 
 .already_registered {
   text-align: center;

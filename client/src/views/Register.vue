@@ -139,32 +139,24 @@ label {
   
 }
 
-.submit button {
-  padding: 15px 20px;
-  background-color: #fa923f;
+ button:hover,
+ button:active {
+  background-color: #Fda942;
   color: white;
+  outline: none;
   border: none;
-  font-family: "Maven Pro", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  
 }
 
-.submit button:hover,
-.submit button:active {
-  background-color: #c97532;
-  color: white;
-}
 
-.submit button[disabled],
-.submit button[disabled]:hover,
-.submit button[disabled]:active {
+
+button[disabled],
+button[disabled]:hover,
+button[disabled]:active {
   border: 1px solid #ccc;
   background-color: transparent;
   color: #ccc;
   cursor: not-allowed;
+  outline: none !important;
 }
 
 .privacy {
