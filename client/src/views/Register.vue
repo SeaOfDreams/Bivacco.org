@@ -139,8 +139,8 @@ label {
   
 }
 
- button:hover,
- button:active {
+button:hover,
+button:active {
   background-color: #Fda942;
   color: white;
   outline: none;

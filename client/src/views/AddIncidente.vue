@@ -2,7 +2,7 @@
 <div class="outer-container">
   <div class="container-add-incidente">
     <div class="header">
-        <h3 class="titolo">Aggiungi Nuovo Incidente</h3>
+        <h3 class="titolo">Aggiungi un Nuovo Incidente</h3>
     </div>
     
     
@@ -61,7 +61,7 @@
         <div class="field">
           <label class="label">Tipo di incidente</label>
           <div class="control">
-            <input class="input" type="text" placeholder='Es. "valanga" oppure "caduta pietre"'  v-model="tipo_di_incidente" required>
+            <input class="input" type="text" placeholder='Es. "valanga" oppure "caduta pietre"'  v-model="tipo_di_evento" required>
           </div>
         </div>
 
@@ -84,7 +84,7 @@
           </div>
         </div>
 
-        <b-field label="Numero partecipanti">
+        <b-field label="Numero partecipanti (compreso te)">
             <b-numberinput controls-position="compact" v-model="nr_partecipanti" required>
             </b-numberinput>
         </b-field>
@@ -142,7 +142,7 @@ export default {
       incidente_id: null,
       Titolo: null,
       attivita_praticata: null,
-      tipo_di_incidente: null,
+      tipo_di_evento: null,
       Data: null,
       Autore: null,
       luogo: null,
@@ -159,7 +159,7 @@ export default {
     }
   },
   
-/* eslint-disable no-unused-vars */
+
   methods: {
       salvaIncidente (e) {
       db.collection('incidenti').add({
@@ -167,7 +167,7 @@ export default {
         attivita_praticata: this.attivita_praticata,
         Data: this.Data,
         luogo: this.luogo,
-        tipo_di_incidente: this.tipo_di_incidente,
+        tipo_di_evento: this.tipo_di_evento,
         Titolo: this.Titolo,
         grado_pericolo_valanghe: this.grado_pericolo_valanghe,
         alt_max_ragg: this.alt_max_ragg,
@@ -180,8 +180,10 @@ export default {
         commento: this.commento,
         intervento_soccorso: this.intervento_soccorso
 
-    }).then(docRef => this.$router.push())
-    .catch(err => console.log(err));
+    }).then(
+      docRef => this.$router.push('/dashboard'),
+      alert("Grazie, l'incidente verrà revisionato ed inserito!")
+      ).catch(err => console.log(err));
     try {
           emailjs.sendForm('service_vna6o2g', 'template_4u3ylio', e.target,
           'user_pG9Ddcf3K98OFcXFd4txk', {
@@ -197,7 +199,7 @@ export default {
       this.attivita_praticata = '',
       this.Data = '',
       this.luogo = '',
-      this.tipo_di_incidente = '',
+      this.tipo_di_evento = '',
       this.Titolo = '',
       this.grado_pericolo_valanghe = '',
       this.alt_max_ragg = '',
@@ -248,6 +250,14 @@ form {
   label {
     font-size: 16px;
   }
+
+button:hover,
+button:active {
+  background-color: #Fda942;
+  color: white;
+  outline: none;
+  border: none;
+}
 
 
 
