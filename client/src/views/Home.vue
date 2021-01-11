@@ -205,7 +205,7 @@ export default {
 
 p.main-text {
   /* font-family: 'Maven Pro', sans-serif; */
-  font-size: 22.5px;
+  font-size: 21px;
   color: #48434f;
   font-weight: 400;
   line-height: 1.6;

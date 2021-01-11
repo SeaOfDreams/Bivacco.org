@@ -84,7 +84,7 @@
           </div>
         </div>
 
-        <b-field label="Numero partecipanti (compreso te)">
+        <b-field label="Numero partecipanti">
             <b-numberinput controls-position="compact" v-model="nr_partecipanti" required>
             </b-numberinput>
         </b-field>
@@ -102,7 +102,7 @@
             <b-input type="textarea" v-model="condizioni_meteo" required></b-input>
         </b-field>
 
-        <b-field label="Misure di prevenzione">
+        <b-field label="Misure di prevenzione adottate">
           <b-input type="textarea" placeholder="Descrivi che tipo di misure di prevenzione sono state adottate. Esempio 'Mantenimento distanze di sicurezza nell attraversamento del pendio'" v-model="misure_prevenzione" required></b-input>
         </b-field>
 
@@ -259,6 +259,10 @@ button:active {
   border: none;
 }
 
+b-field b-input {
+  white-space: pre-wrap;
+  white-space: pre-line;
+}
 
 
 .field:not(:last-child) {

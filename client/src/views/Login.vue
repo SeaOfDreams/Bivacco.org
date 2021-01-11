@@ -1,5 +1,6 @@
 <template>
   <div class="outer-container">
+    <h3 class="header">Login</h3>
     <div class="container-form-login">
       <form class="signin-form" action="">
         <b-field label="Email">
@@ -16,7 +17,7 @@
           <b-input
             type="password"
             v-model="password"
-            placeholder="Min 6 - Max 30 caratteri"
+            placeholder="Inserisci la tua password"
             password-reveal
           >
           </b-input>
@@ -81,15 +82,22 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 120px;
 }
 
 .row {
   text-align: center;
 }
 
-h1 {
+h1,
+h3.header {
   text-align: center;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 38px;
+  margin-bottom: 25px;
+  color: #000; 
+  font-weight: 600;
+  margin-top: 120px;
+  
 }
 
 label {

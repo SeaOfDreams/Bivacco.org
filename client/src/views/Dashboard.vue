@@ -1,13 +1,14 @@
 <template>
   <div id="dashboard">
     <div class="container_incidenti">
+      <h3 class="header">Incidenti</h3>
       <div class="cards-container">
-        <h3 class="header">Incidenti</h3>
+        
         <div class="card-horizontal"  v-for="incidente in revisedItems" v-bind:key="incidente.id">
           
           <div class="card-content">
             <div class="top_card">
-              <p class="inizio_card"> {{incidente.Data | formatDate}} - Autore: {{incidente.Autore}}</p><span class="titolo">{{incidente.Titolo}}</span>
+              <p class="inizio_card"> {{incidente.Data | formatDate}} - Autore: <span id="autore">{{incidente.Autore}}</span></p><span class="titolo">{{incidente.Titolo}}</span>
               <p class="luogo">Luogo: {{incidente.luogo}}</p>
               <span class="attività">{{incidente.attivita_praticata}} </span>
               <img class="activity-img" v-bind:src="incidente.icona" alt="">
@@ -52,7 +53,7 @@ export default {
   },
    
   created() {
-    db.collection("incidenti").orderBy('Data')      
+    db.collection("incidenti").orderBy('Data')     
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
@@ -111,9 +112,10 @@ export default {
 .cards-container {
   max-width: 780px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   margin: 0 auto;
   padding: 0 20px;
+  align-items: center;
 }
 
 .card-content {
@@ -124,6 +126,9 @@ export default {
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  text-align: center;
+  padding: 20px 40px;
+  width: 560px;
 }
 
 .inizio_card {  
@@ -161,6 +166,10 @@ span.titolo {
   font-weight: 700;
   font-size: 22px;
   
+}
+
+#autore {
+  color:#7957d5
 }
 
 span.attività {

@@ -1,7 +1,8 @@
 <template>
   <div class="outer-container">
+    <h3 class="header">Registrati per inserire un incidente</h3>
     <div class="container-form-login">
-      <h3 class="header">Registrati per inserire un incidente</h3>
+      
       <form class="signin-form" action="">
         <b-field label="Email">
           <b-input
@@ -78,7 +79,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 120px;
 }
 
 h1,
@@ -87,9 +87,9 @@ h3.header {
   font-family: 'Maven Pro', sans-serif;
   font-size: 38px;
   color: #000; 
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-top: 120px;
   
 }
 

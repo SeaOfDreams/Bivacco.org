@@ -206,6 +206,7 @@ export default {
   padding: 15px;
   max-width: 1100px;
   border-radius: 8px;
+  text-align: center;
 }
 
 .titolo {
@@ -260,7 +261,10 @@ span.attività {
 
 .container-descrizione {
   padding: 5px 15px;
+  white-space: pre-wrap;
+  white-space: pre-line;
 }
+
 
 .back {
   text-align: center;
