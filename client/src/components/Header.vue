@@ -72,6 +72,14 @@ img.logo {
   margin-left: 50px;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  img.logo {
+  margin-left: 5px;
+}
+  
+}
+
 h1.title {
   font-size: 28px;
 }

@@ -153,6 +153,15 @@ export default {
   animation: moveInLeft 1s ease-in-out;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .title-main {
+  display: none;
+  }
+
+}
+    
+
 .title-sub {
   display: block;
   font-size: 42px;
@@ -162,6 +171,15 @@ export default {
   margin-bottom: 30px;
 
   animation: moveInRight 1s ease-out;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .title-sub {
+  width: 350px;
+  padding: 0px 25px
+}
+
 }
 
 @keyframes moveInLeft {
@@ -203,6 +221,15 @@ export default {
   margin: 0 auto;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  
+.primary-container {
+  padding: 20px;
+  
+}
+
+}
+
 p.main-text {
   /* font-family: 'Maven Pro', sans-serif; */
   font-size: 21px;
@@ -234,6 +261,14 @@ h1.primary-container-title {
   margin-bottom: 100px;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  
+.secondary 
+{
+    margin-bottom: 80px;
+}
+}
+
 .secondary-container {
   display: grid;
 
@@ -242,6 +277,15 @@ h1.primary-container-title {
   row-gap: 30px;
   margin: 60px 25px;
   padding: 0 25px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+.secondary-container {
+  grid-template-columns: 1fr;
+  margin: 10px 0px;
+  padding: 0px 20px;  
+}
 }
 
 .article-title {
@@ -259,12 +303,29 @@ h1.primary-container-title {
   color: #48434f;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  
+.article-text {
+  font-size: 20px;
+ 
+}
+}
+
 .third-section {
   margin-top: 20px;  
   padding-top: 50px;
   display: flex;
   justify-content: center;
   
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+.third-section {
+  margin-top: 0px;  
+  padding-top: 0px;
+  
+}
 }
 
 .buttons {
@@ -298,5 +359,11 @@ a.button.is-primary.aggiunta:hover {
 
 .article-icon {
   transform: translateX(-8px);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  
 }
 </style>

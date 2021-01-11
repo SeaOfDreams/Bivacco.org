@@ -33,6 +33,14 @@ footer {
   padding-bottom: 20px;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  
+footer {
+    padding: 1rem 1rem 6rem;
+}
+}
+
+
 .disclaimer {
   max-width: 700px;
   margin: 0 auto;
