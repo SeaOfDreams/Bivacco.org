@@ -93,6 +93,14 @@ h3.header {
   
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  
+h1,
+h3.header {
+  margin-top: 70px;
+}
+}
+
 .row {
   text-align: center;
 }
@@ -107,6 +115,20 @@ label {
   border: 1px solid #d9d4d4;
   padding: 20px;
   box-shadow: 0 2px 3px #ccc;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  
+.signin-form {
+  width: 90%;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .signin-form {
+  margin-bottom: 100px;
+}
+  
 }
 
 .input {

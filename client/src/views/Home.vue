@@ -17,15 +17,25 @@
           Condividere la
           <strong>
             <span class="article-span">tua esperienza</span>
-          </strong> può salvare delle vite!
+          </strong>
+          può salvare delle vite!
         </h1>
         <p class="main-text">
-          Bivacco.org nasce da una semplice constatazione: spesso, alla base di un gran numero di incidenti in montagna (per quanto ogni evento sia diverso dall'altro), vi sono una serie di errori "ricorrenti".
+          Bivacco.org nasce da una semplice constatazione: spesso, alla base di
+          un gran numero di incidenti in montagna (per quanto ogni evento sia
+          diverso dall'altro), vi sono una serie di errori "ricorrenti".
           <br />
-          <br />Mentre in molti Paesi Europei (Francia, Svizzera, Austria) esistono strumenti di "condivisione" sulle dinamiche che hanno portato all'originarsi di tali incidenti, in un'ottica di prevenzione, in Italia non esiste niente di tutto ciò.
-          L'obiettivo è quindi quello di creare un database dove si possano condividere informazioni utili a tutti gli amanti degli sport di montagna, per diffondere tale conoscenza e migliorare la sicurezza in tal senso.
+          <br />Mentre in molti Paesi Europei (Francia, Svizzera, Austria)
+          esistono strumenti di "condivisione" sulle dinamiche che hanno portato
+          all'originarsi di tali incidenti, in un'ottica di prevenzione, in
+          Italia non esiste niente di tutto ciò. L'obiettivo è quindi quello di
+          creare un database dove si possano condividere informazioni utili a
+          tutti gli amanti degli sport di montagna, per diffondere tale
+          conoscenza e migliorare la sicurezza in tal senso.
           <br />
-          <br />Ricordiamoci comunque che il rischio "0" in montagna non esiste e che ogni situazione va valutata singolarmente e inquadrata nelle sue circostanze particolari.
+          <br />Ricordiamoci comunque che il rischio "0" in montagna non esiste
+          e che ogni situazione va valutata singolarmente e inquadrata nelle sue
+          circostanze particolari.
         </p>
       </div>
       <!-- End primary container -->
@@ -42,11 +52,13 @@
             La tua
             <strong>
               <span class="article-span">testimonianza</span>
-            </strong> è preziosa
+            </strong>
+            è preziosa
           </h3>
           <p class="article-text">
-            Con il tuo contributo puoi evitare il verificarsi di nuovi incidenti, diffondendo
-            conoscenza. Puoi decidere di rimanere nell'anonimato o meno.
+            Con il tuo contributo puoi evitare il verificarsi di nuovi
+            incidenti, diffondendo conoscenza. Puoi decidere di rimanere
+            nell'anonimato o meno.
           </p>
         </article>
 
@@ -57,10 +69,12 @@
           <h3 class="article-title">
             <strong>
               <span class="article-span">Chi</span>
-            </strong> può inserire
+            </strong>
+            può inserire
           </h3>
           <p class="article-text">
-            L'inserimento può essere effetuato solamente da chi è stato coinvolto in prima persona o è stato testimone dell'incidente.
+            L'inserimento può essere effetuato solamente da chi è stato
+            coinvolto in prima persona o è stato testimone dell'incidente.
             Niente per "sentito dire" 👂
           </p>
         </article>
@@ -72,21 +86,19 @@
           <h3 class="article-title">
             <strong>
               <span class="article-span">Cosa</span>
-            </strong> si può inserire
+            </strong>
+            si può inserire
           </h3>
           <p class="article-text">
-            Si possono inserire incidenti, ma anche "quasi incidenti". Spesso sono proprio le situazioni
-            in cui si è "sfiorato" l'incidente quelle che insegnano di più.
+            Si possono inserire incidenti, ma anche "quasi incidenti". Spesso
+            sono proprio le situazioni in cui si è "sfiorato" l'incidente quelle
+            che insegnano di più.
           </p>
         </article>
 
         <article>
           <div class="article-icon">
-          <i
-            data-vi="shield"
-            data-vi-size="45"
-            data-vi-primary="#F26522"
-          ></i>
+            <i data-vi="shield" data-vi-size="45" data-vi-primary="#F26522"></i>
           </div>
           <h3 class="article-title">
             Proteggiamo la
@@ -94,9 +106,11 @@
               <span class="article-span">privacy</span>
             </strong>
           </h3>
-          <p
-            class="article-text"
-          >Evita di menzionare le persone coinvolte per nome e/o cognome (con il tuo puoi decidere liberamente cosa fare). Pensa che i loro famigliari potrebbero leggere il tuo report.</p>
+          <p class="article-text">
+            Evita di menzionare le persone coinvolte per nome e/o cognome (con
+            il tuo puoi decidere liberamente cosa fare). Pensa che i loro
+            famigliari potrebbero leggere il tuo report.
+          </p>
         </article>
       </div>
       <!-- End secondary-container -->
@@ -105,9 +119,13 @@
 
     <section class="third-section">
       <div class="buttons">
-        <router-link class="button is-primary vedi" :to="{ path: '/dashboard' }"><strong>Vedi incidenti -></strong></router-link>
+        <router-link class="button is-primary vedi" :to="{ path: '/dashboard' }"
+          ><strong>Vedi incidenti -></strong></router-link
+        >
         <h4>oppure</h4>
-        <router-link class="button is-primary aggiunta" :to="{ path: '/add' }"><strong>Inserisci incidente -></strong></router-link>
+        <router-link class="button is-primary aggiunta" :to="{ path: '/add' }"
+          ><strong>Inserisci incidente -></strong></router-link
+        >
       </div>
     </section>
   </div>
@@ -154,13 +172,16 @@ export default {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
   .title-main {
-  display: none;
+    display: none;
   }
-
 }
-    
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .title-main {
+    width: 560px;
+  }
+}
 
 .title-sub {
   display: block;
@@ -174,12 +195,10 @@ export default {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
   .title-sub {
-  width: 350px;
-  padding: 0px 25px
-}
-
+    width: 350px;
+    padding: 0px 25px;
+  }
 }
 
 @keyframes moveInLeft {
@@ -222,12 +241,16 @@ export default {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
-.primary-container {
-  padding: 20px;
-  
+  .primary-container {
+    padding: 20px;
+  }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .primary-container {
+    padding: 50px 20px;
+    max-width: 650px;
+  }
 }
 
 p.main-text {
@@ -262,11 +285,16 @@ h1.primary-container-title {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
-.secondary 
-{
+  .secondary {
     margin-bottom: 80px;
+  }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .secondary {
+    max-width: 620px;
+    padding: 0px;
+  }
 }
 
 .secondary-container {
@@ -279,13 +307,24 @@ h1.primary-container-title {
   padding: 0 25px;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  
-.secondary-container {
-  grid-template-columns: 1fr;
-  margin: 10px 0px;
-  padding: 0px 20px;  
+@media (min-width: 768px) and (max-width: 1024px) {
+  .primary-container {
+    max-width: 650px;
+  }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .secondary-container {
+    grid-template-columns: 1fr;
+    margin: 10px 0px;
+    padding: 0px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .secondary {
+    margin-top: 60px;
+  }
 }
 
 .article-title {
@@ -304,38 +343,33 @@ h1.primary-container-title {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
-.article-text {
-  font-size: 20px;
- 
-}
+  .article-text {
+    font-size: 20px;
+  }
 }
 
 .third-section {
-  margin-top: 20px;  
+  margin-top: 20px;
   padding-top: 50px;
   display: flex;
   justify-content: center;
-  
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
-.third-section {
-  margin-top: 0px;  
-  padding-top: 0px;
-  
-}
+  .third-section {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
 }
 
 .buttons {
   display: flex;
-  flex-direction: column;   
+  flex-direction: column;
 }
 
 a.button.is-primary.aggiunta {
-  background-color: #7957D5;
-  border: 1px solid #7957D5;
+  background-color: #7957d5;
+  border: 1px solid #7957d5;
   font-size: 20px;
   padding: 26px 22px;
   margin-top: 10px;
@@ -346,7 +380,7 @@ a.button.is-primary.vedi {
   font-size: 20px;
   margin-bottom: 10px;
   padding: 26px 22px;
-  border: 1px solid #F26522;
+  border: 1px solid #f26522;
 }
 
 a.button.is-primary.vedi:hover {
@@ -362,8 +396,6 @@ a.button.is-primary.aggiunta:hover {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
   /* CSS */
-  
 }
 </style>

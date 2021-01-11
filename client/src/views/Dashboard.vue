@@ -131,6 +131,14 @@ export default {
   width: 560px;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  
+.card-horizontal {
+  padding: 0px;
+  width: 95%;
+}
+}
+
 .inizio_card {  
   font-size: 15px;
 }

@@ -77,8 +77,17 @@ img.logo {
   img.logo {
   margin-left: 5px;
 }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  img.logo {
+  margin-left: 10px;
+}
   
 }
+
+
 
 h1.title {
   font-size: 28px;
