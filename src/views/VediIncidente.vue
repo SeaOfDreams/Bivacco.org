@@ -122,7 +122,7 @@ export default {
     };
   },
   beforeRouteEnter(to, from, next) {
-    db.collection("incidenti").doc(id)
+    db.collection("incidenti")
       .where("incidente_id", "==", to.params.incidente_id)
       .get()
       .then((querySnapshot) => {
