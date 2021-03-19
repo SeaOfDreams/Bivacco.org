@@ -34,7 +34,7 @@ Usiamo Github per l'hosting del codice, per tracciare le issues e le richieste d
 
 Ogni apporto che farai al codice, sarà regolato dalla stessa [Licenza MIT](http://choosealicense.com/licenses/mit/)  che regola il progetto.
 
-## Per i report dei bugs usa le [issues](https://github.com/briandk/transcriptase-atom/issues) in Github
+## Per i report dei bugs usa questo [template](/github\ISSUE_TEMPLATE/bug_report.md)
 
 
 Segnala un bug [aprendo una nuova issue](https://gist.github.com/briandk/3d2e8b3ec8daf5a27a62) in Github.
