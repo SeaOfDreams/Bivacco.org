@@ -17,7 +17,7 @@
     
 
         <b-field label="Password">
-          <b-input v-model="password" type="password" placeholder="Scegli una password tra i 6 e i 30 caratteri" password-reveal>
+          <b-input v-model="password" type="password" placeholder="Tra i 6 e i 30 caratteri" password-reveal>
           </b-input>
         </b-field>
 
