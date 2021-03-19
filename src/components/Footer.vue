@@ -37,6 +37,7 @@ footer {
   
 footer {
     padding: 1rem 1rem 6rem;
+    margin-top: 30px;
 }
 }
 
