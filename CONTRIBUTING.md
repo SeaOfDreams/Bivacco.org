@@ -1,6 +1,7 @@
 ## Grazie
 
 👋 Innanzitutto benvenuto e grazie per il tuo interesse nel contribuire a questo progetto 👍
+
 Probabilmente sei un appassionato di montagna e tecnologia se stai leggendo queste righe. 
 
 Grazie per dedicare parte del tuo tempo alla crescita di questo progetto, che ha lo scopo di aiutare a rendere più sicure le uscite in montagna di chi, come noi, ama l'aria sottile.
@@ -15,7 +16,7 @@ Puoi contribuire a questo progetto in vari modi:
 -   Proponendo nuove funzionalità (vedi al punto successivo la nostra roadmap per alcune idee)
 -   Mantenendo il codice
 
-Prima di effettuare dei cambiamenti, ti chiediamo di contattarci per discuterli insieme. Puoi scrivere a info@bivacco.or o aprire una issue.
+Prima di effettuare dei cambiamenti, ti chiediamo di contattarci per discuterli insieme. Puoi scrivere a info@bivacco.org o aprire una [issue](https://github.com/SeaOfDreams/Bivacco.org/issues) su Github.
 
 ## Roadmap
 L'idea è quella di far diventare Bivacco.org un "hub" di informazioni preziose per gli appassionati di montagna con un solo scopo: aumentare la sicurezza nelle uscite e, di conseguenza, ridurre il numero di incidenti.  
@@ -28,16 +29,16 @@ Angolo del Materiale: sezione dove fornire consigli sul materiale da mettere nel
 - Sezione Primo Soccorso (a cura di un Medico): informazioni di primo soccorso e medicina di alta montagna.
 
 ## Usiamo Github
-Usiamo Github per l'hosting del codice, per tracciare le issues e le richieste di nuove funzionalità e per le pull requests. 
+Usiamo [Github](https://github.com/SeaOfDreams/Bivacco.org) per l'hosting del codice, per tracciare le issues e le richieste di nuove funzionalità e per le pull requests. 
 
 ## Tutti i contributi al progetto andranno sotto licenza MIT 
 
 Ogni apporto che farai al codice, sarà regolato dalla stessa [Licenza MIT](http://choosealicense.com/licenses/mit/)  che regola il progetto.
 
-## Per i report dei bugs usa le issues in Github
+## Per i report dei bugs usa le issues su Github
 
 
-Segnala un bug [aprendo una nuova issue](https://github.com/SeaOfDreams/Bivacco.org/issues) in Github.
+Segnala un bug [aprendo una nuova issue](https://github.com/SeaOfDreams/Bivacco.org/issues) su Github.
 
 ## Codice di Condotta
 Abbiamo adottato il Contributor Covenant come codice di condotta, puoi leggerlo in dettaglio nel [Code of Conduct.md](/Code_of_Conduct.md) file.
