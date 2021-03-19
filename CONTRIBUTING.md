@@ -12,8 +12,18 @@ Qui di seguito troverai maggiori informazioni su come è possibile contribuire a
 Puoi contribuire a questo progetto in vari modi:
 
 -   Segnalando un bug
--   Proponendo nuove funzionalità. Per una lista di idee su nuove funzionalità che si potrebbero implementare leggi il [README.md](/README.md) file.
+-   Proponendo nuove funzionalità (vedi al punto successivo la nostra roadmap per alcune idee)
 -   Mantenendo il codice
+
+## Roadmap
+L'idea è quella di far diventare Bivacco.org un "hub" di informazioni preziose per gli appassionati di montagna con un solo scopo: aumentare la sicurezza nelle uscite e, di conseguenza, ridurre il numero di incidenti.  
+
+Alcune idee di features da implementare che sono nella nostra roadmap:
+- Sezione Meteo: aggregazione (attraverso API o web scraping) delle informazioni meteo dai principali siti web ritenuti "affidabili" da chi pratica attività di montagna (esempio: Nimbus, Meteo Suisse, etc).
+- Sezione Bollettini Valanghe: idem come sopra, aggregando i principali bollettini nivologici.
+- Sezioni condizioni della montagna: aggregazione delle informazioni reperite (tramite web scraping o API) sui principali portali, esempio OHM Chamonix, etc
+Angolo del Materiale: sezione dove fornire consigli sul materiale da mettere nello zaino per ogni tipo di uscita (a cura di una Guida Alpina).
+- Sezione Primo Soccorso (a cura di un Medico): informazioni di primo soccorso e medicina di alta montagna.
 
 ## Usiamo Github
 Usiamo Github per l'hosting del codice, per tracciare le issues e le richieste di nuove funzionalità e per le pull requests. 

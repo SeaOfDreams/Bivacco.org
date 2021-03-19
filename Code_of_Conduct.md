@@ -1,5 +1,5 @@
 
-# Contributor Covenant Code of Conduct
+# Bivacco.org Code of Conduct
 
 ## Our Pledge
 
