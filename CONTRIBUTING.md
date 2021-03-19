@@ -9,7 +9,7 @@ Qui di seguito troverai maggiori informazioni su come è possibile contribuire a
 
 ## Modalità di contribuzione
 
-Puoi contribuire a questo progetto in vari modi
+Puoi contribuire a questo progetto in vari modi:
 
 -   Segnalando un bug
 -   Proponendo nuove funzionalità
