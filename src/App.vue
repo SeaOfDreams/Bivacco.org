@@ -8,7 +8,7 @@
 </template>
 
 <script>
-/* eslint-disable no-unused-vars */
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
