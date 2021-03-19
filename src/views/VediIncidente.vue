@@ -276,6 +276,12 @@ span.attività {
   padding-bottom: 20px;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  .right-column {
+    width: 90%;
+  }
+}
+
 .descrizione {
   padding: 15px 0px 0px 15px;
   font-size: 26px;
