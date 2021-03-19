@@ -34,10 +34,10 @@ Usiamo Github per l'hosting del codice, per tracciare le issues e le richieste d
 
 Ogni apporto che farai al codice, sarà regolato dalla stessa [Licenza MIT](http://choosealicense.com/licenses/mit/)  che regola il progetto.
 
-## Per i report dei bugs usa questo [template](/github\ISSUE_TEMPLATE/bug_report.md)
+## Per i report dei bugs usa le issues in Github
 
 
-Segnala un bug [aprendo una nuova issue](https://gist.github.com/briandk/3d2e8b3ec8daf5a27a62) in Github.
+Segnala un bug [aprendo una nuova issue](https://github.com/SeaOfDreams/Bivacco.org/issues) in Github.
 
 ## Codice di Condotta
 Abbiamo adottato il Contributor Covenant come codice di condotta, puoi leggerlo in dettaglio nel [Code of Conduct.md](/Code_of_Conduct.md) file.
