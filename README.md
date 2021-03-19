@@ -20,6 +20,26 @@ E' benvenuta ogni richiesta di contribuzione o suggerimento.
 
 Puoi trovare maggiori informazioni su come contribuire al progetto e su che tipo di contribuzione è possibile nel file [contributing.md](/CONTRIBUTING.md)  
 
+## Future implementazioni
+L'idea è quella di far diventare Bivacco.org una fonte di informazioni preziose in merito alla sicurezza per gli appassionati di montagna. 
+
+Idee di possibili features da implementare:
+
+ - Sezione Meteo (con l'aggregazione delle principali fonti di
+   previsioni meteo affidabili - es. Nimbus, Meteo Suisse, etc).
+ - Sezione Bollettini Valanghe: idem come sopra, aggregando i principali
+   bollettini nivologici.
+ - Sezioni condizioni della montagna: aggregazione delle informazioni
+   reperite (tramite web scraping o API) sui principali portali, esempio
+   OHM Chamonix, etc
+ - Angolo del Materiale: sezione dove fornire consigli sul materiale da
+   mettere nello zaino per ogni tipo di uscita (a cura di una Guida
+   Alpina).
+ - Sezione Primo Soccorso (a cura di un Medico): informazioni di primo
+   soccorso e medicina di alta montagna.
+
+
+
 
 ## Licenza
 [MIT](https://choosealicense.com/licenses/mit/)

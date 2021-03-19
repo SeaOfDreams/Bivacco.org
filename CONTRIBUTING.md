@@ -12,7 +12,7 @@ Qui di seguito troverai maggiori informazioni su come è possibile contribuire a
 Puoi contribuire a questo progetto in vari modi:
 
 -   Segnalando un bug
--   Proponendo nuove funzionalità
+-   Proponendo nuove funzionalità. Per una lista di idee su nuove funzionalità che si potrebbero implementare leggi il [README.md](/README.md) file.
 -   Mantenendo il codice
 
 ## Usiamo Github
