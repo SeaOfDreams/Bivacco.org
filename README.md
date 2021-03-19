@@ -1,6 +1,6 @@
 # Bivacco.org
 
-Bivacco.org is an open-source project è un progetto open-source nato con lo scopo di creare un database di incidenti in montagna. 
+Bivacco.org è un progetto open-source nato con lo scopo di creare un database di incidenti in montagna. 
 
 L'obiettivo è quello di condividere informazioni utili a prevenire il ripetersi di errori, diffondere conoscenza ed aumentare quindi la sicurezza in montagna.  
 
