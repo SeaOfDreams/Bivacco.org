@@ -15,6 +15,8 @@ Puoi contribuire a questo progetto in vari modi:
 -   Proponendo nuove funzionalità (vedi al punto successivo la nostra roadmap per alcune idee)
 -   Mantenendo il codice
 
+Prima di effettuare dei cambiamenti, ti chiediamo di contattarci per discuterli insieme. Puoi scrivere a info@bivacco.or o aprire una issue.
+
 ## Roadmap
 L'idea è quella di far diventare Bivacco.org un "hub" di informazioni preziose per gli appassionati di montagna con un solo scopo: aumentare la sicurezza nelle uscite e, di conseguenza, ridurre il numero di incidenti.  
 
