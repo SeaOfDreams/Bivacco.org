@@ -26,3 +26,6 @@ Ogni apporto che farai al codice, sarà regolato dalla stessa [Licenza MIT](http
 
 
 Segnala un bug [aprendo una nuova issue](https://gist.github.com/briandk/3d2e8b3ec8daf5a27a62) in Github.
+
+## Codice di Condotta
+Abbiamo adottato il Contributor Covenant come codice di condotta, puoi leggerlo nel dettaglio nel [Code of Conduct.md](/Code_of_Conduct.md) file.
