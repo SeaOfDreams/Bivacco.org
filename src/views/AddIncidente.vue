@@ -146,7 +146,7 @@
           <b-input
             type="textarea"
             rows="10"
-            placeholder="Descrivi l'evento. Evita di menzionare nomi e cognomi di persone coinvolte."
+            placeholder="Descrivi l'evento, cercando di essere il più preciso possibile. Se sei stato solo testimone dell'evento (non coinvolto personalmente) ti consiglio di evitare di menzionare nomi e cognomi di persone coinvolte, per non creare situazioni spiacevoli."
             required
             v-model="descrizione"
           ></b-input>
@@ -177,7 +177,7 @@
           <b-input
             type="textarea"
             rows="15"
-            placeholder="Inserisci, se lo desideri, i tuoi commenti personali. Ad esempio cosa pensi si sarebbe potuto fare per evitare l'evento e ogni altra osservazione che pensi possa servire ad altri per evitare di ripetere eventuali errori."
+            placeholder="Inserisci, se lo desideri, i tuoi commenti personali. Ad esempio se pensi che si sarebbe potuto fare qualcosa per evitare l'incidente od ogni altra osservazione che pensi possa servire ad altri."
             v-model="commento"
             required
           ></b-input>
