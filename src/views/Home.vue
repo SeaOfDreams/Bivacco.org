@@ -23,11 +23,10 @@
         <p class="main-text">
           Bivacco.org nasce da una semplice constatazione: spesso, alla base di
           un gran numero di incidenti in montagna (per quanto ogni evento sia
-          diverso dall'altro), vi sono una serie di errori "ricorrenti".
+          diverso dall'altro), vi sono una serie di dinamiche "ricorrenti".
           <br />
           <br />Mentre in molti Paesi Europei (Francia, Svizzera, Austria)
-          esistono strumenti di "condivisione" sulle dinamiche che hanno portato
-          all'originarsi di tali incidenti, in un'ottica di prevenzione, in
+          esistono strumenti di "condivisione" su tali dinamiche, in un'ottica di prevenzione, in
           Italia non esiste niente di tutto ciò. L'obiettivo è quindi quello di
           creare un database dove si possano condividere informazioni utili a
           tutti gli amanti degli sport di montagna, per diffondere tale
